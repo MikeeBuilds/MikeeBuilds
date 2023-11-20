@@ -16,7 +16,7 @@
 ‎‎ [![Reddit User Karma](https://img.shields.io/reddit/user-karma/combined/AlgoHussle?label=Reddit&style=for-the-badge&logo=reddit&logoColor=ffffff)](https://www.reddit.com/user/AlgoHussle)  
 ‎‎ [![Keybase PGP](https://img.shields.io/keybase/pgp/algohussle?label=Keybase&logo=keybase&logoColor=ffffff&style=for-the-badge)](https://keybase.io/algohussle)
 ‎‎ [![DockerHub Profile](https://img.shields.io/badge/DockerHub-mikeebuilds-informational?style=for-the-badge&logo=docker&logoColor=ffffff)](https://hub.docker.com/u/mikeebuilds)
-‎‎ [![Substack](https://img.shields.io/badge/Substack-%23006f5c.svg?style=for-the-badge&logo=substack&logoColor=FF6719)](https://algohussle.substack.com/)
+‎‎ 
 
 
 # Current projects
