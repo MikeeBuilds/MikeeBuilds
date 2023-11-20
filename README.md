@@ -3,9 +3,9 @@
 
 - 🧑🏾‍💻 I'm some sort of a full-stack developer? If [this](https://www.w3schools.com/whatis/whatis_fullstack.asp) description makes me a full-stack developer.
 - 🌱 I work a lot with Javascript especially with NodeJS and have been loving threejs and Nextjs
-- 🐟 When Im not coding Im usually spending time outdoors fishing or hiking or teaching my kids how to ride bikes.
+- 🐟 When Im not coding Im usually spending time outdoors or hiking new public lands or teaching my kids how to ride bikes.
 - 🖇️ I like to discuss coding with others and learn more. So dont hesitate to send me a DM!
-- 📫 I do write blogs about tech topics and scroll through twitter pretty often.
+- 📫 I do write blogs about tech & outdoor topics and scroll through LinkedIn pretty often.
 - ❓ Want to know more about me? You can always contact me via several social medias!
 
 ## Social media
