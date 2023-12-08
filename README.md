@@ -24,11 +24,7 @@
 - Some other small side-projects that are not important enough to mention
 
 
-<div align="center">
-  <h2 align="center> 🖥️ Workflow Setup</h2>
-  <img src="https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoColor=white" alt="macOS">
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="VS Code">
-</div>
+
 
 <h2 align="center">Github stats :bar_chart:</h2>
 
