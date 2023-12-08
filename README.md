@@ -38,7 +38,7 @@
 
 
 <p align="center">
-  <h2>🛠️ Languages </h2>
+  <h2 align="center">🛠️ Languages </h2>
   <table>
     <tr>
       <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python"></a></td>
