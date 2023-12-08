@@ -33,11 +33,6 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
 </div>
 
-<h2 align="center">Top Languages</h2>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
-</div>
 
 
 
