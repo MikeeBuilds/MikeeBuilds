@@ -24,19 +24,22 @@
 - Some other small side-projects that are not important enough to mention
 
 
+<div align="center">
+  <h2 align="center>## 🖥️ Workflow Setup</h2>
+  <img src="https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoColor=white" alt="macOS">
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="VS Code">
+</div>
+
 <h2 align="center">Github stats :bar_chart:</h2>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start;">
-
-  <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
-  </div>
-
-  <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark" alt="MikeeBuilds :: Profile Stats" />
-  </div>
-
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
 </div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark" alt="MikeeBuilds :: Profile Stats" />
+</div>
+
 
 
 
