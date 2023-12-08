@@ -68,14 +68,15 @@
 
 <h2 align="center>## 🖥️ Workflow Setup</h2>
 
+<p align="center">
+  <a href="https://www.apple.com/macos/">
+    <img src="https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoColor=white" alt="macOS">
+  </a>
+</p>
 
-
-[![macOS](https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoColor=white)](https://www.apple.com/macos/)
-
-![vs-code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
-
-
-
+<p align="center">
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="VS Code">
+</p>
 
 
 <h4 align="center">Visitor's count :eyes:</h4>
