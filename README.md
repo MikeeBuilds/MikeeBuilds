@@ -29,6 +29,7 @@
 <h2 align="center">Github stats :bar_chart:</h2>
 
 <div align="center">
+  ![Mikee's GitHub stats](https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=transparent)
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
 </div>
 
