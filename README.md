@@ -26,8 +26,13 @@
 
 <h2 align="center">Github stats :bar_chart:</h2>
 
-<p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds">
-<img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark" align="right" alt="MikeeBuilds" :: Profile Stats" /></p>
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark" alt="MikeeBuilds :: Profile Stats" />
+</p>
 
 
 
