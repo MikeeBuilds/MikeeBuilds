@@ -66,7 +66,7 @@
   </table>
 </p>
 
-## 🖥️ Workflow Setup
+<h2 align="center>## 🖥️ Workflow Setup</h2>
 
 
 
