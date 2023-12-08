@@ -28,11 +28,11 @@
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start;">
 
-  <div>
+  <div align="center">
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
   </div>
 
-  <div>
+  <div align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark" alt="MikeeBuilds :: Profile Stats" />
   </div>
 
