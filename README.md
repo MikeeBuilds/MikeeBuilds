@@ -44,7 +44,7 @@
 
 <p align="center">
   <h2 align="center">🛠️ Languages </h2>
-  <table>
+  <table align="center">
     <tr>
       <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python"></a></td>
       <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=typescript"></a></td>
