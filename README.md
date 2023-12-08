@@ -28,10 +28,14 @@
 
 <h2 align="center">Github stats :bar_chart:</h2>
 
-<div align="center" style="display: flex; flex-direction: column; align-items: center;">
-  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=transparent" alt="MikeeBuilds :: GitHub Stats">
+<div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark" alt="MikeeBuilds :: Top Langs">
 </div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark" alt="MikeeBuilds :: Profile Stats" />
+</div>
+
 
 
 
