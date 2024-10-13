@@ -1,27 +1,62 @@
-name: Update README with latest blog posts
+name: Update Blog Posts in README
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    - cron: '0 * * * *'  # Runs every hour
 
 jobs:
   update-readme:
-    name: Update README with latest blog posts
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Required to push changes to the repository
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3  # Updated to the latest version
 
       - name: Fetch latest blog posts
-        uses: gautamkrishnar/blog-post-workflow@v1
+        id: fetch_posts
+        uses: ErrorGamer2000/github-readme-blog-post-action@v1
         with:
-          feed_list: "https://mikeebuilds.tech/rss.xml"
-          max_post_count: 5
-          template: "- [$title]($url) - $date - "
-          commit_message: "Update README with latest blog posts"
-          committer_username: "github-actions[bot]"
-          committer_email: "github-actions[bot]@users.noreply.github.com"
+          feed_urls: "https://mikeebuilds.tech/rss.xml"  # Your blog's RSS feed URL
+
+      - name: Check if there are changes
+        id: check_changes
+        run: |
+          echo "Fetched posts: '${{ steps.fetch_posts.outputs.blog_posts }}'"
+          if [ -z "${{ steps.fetch_posts.outputs.blog_posts }}" ]; then
+            echo "No new blog posts found."
+            echo "changes=false" >> $GITHUB_ENV
+          else
+            echo "New blog posts found."
+            echo "changes=true" >> $GITHUB_ENV
+          fi
+
+      - name: Fetch last known blog post if no new posts
+        if: env.changes == 'false'
+        run: |
+          echo "Fetching last known blog post..."
+          echo "- [Last Known Post](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer)" >> README.md
+
+      - name: Update README with latest blog posts
+        if: env.changes == 'true'
+        run: |
+          echo "Updating README with new blog posts..."
+          if ! grep -q '## 📝 Latest Blog Posts' README.md; then
+            echo "## 📝 Latest Blog Posts" >> README.md
+            echo "<!-- BLOG-POST-LIST:START -->" >> README.md
+            echo "<!-- BLOG-POST-LIST:END -->" >> README.md
+          fi
+          sed -i "/<!-- BLOG-POST-LIST:START -->/,/<!-- BLOG-POST-LIST:END -->/{//!d;}; /<!-- BLOG-POST-LIST:START -->/a ${{ steps.fetch_posts.outputs.blog_posts }}" README.md
+
+      - name: Commit changes
+        if: env.changes == 'true' || env.changes == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git diff --quiet || (git commit -m "Update README with latest blog posts" && git push origin main)
