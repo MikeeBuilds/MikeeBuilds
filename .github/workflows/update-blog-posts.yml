@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to the latest version
 
       - name: Fetch latest blog posts
         id: fetch_posts
@@ -58,7 +58,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
-          git add README.md
-          git diff --quiet || (git commit -m "Update README with latest blog posts" && git push origin main)
           git add README.md
           git diff --quiet || (git commit -m "Update README with latest blog posts" && git push origin main)
