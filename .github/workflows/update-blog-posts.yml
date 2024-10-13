@@ -1,0 +1,54 @@
+name: Update Blog Posts in README
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Required to push changes to the repository
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch latest blog posts
+        id: fetch_posts
+        uses: ErrorGamer2000/github-readme-blog-post-action@v1
+        with:
+          feed_urls: "https://mikeebuild.tech/feed.xml"  # Replace with your blog's RSS feed URL
+
+      - name: Check if there are changes
+        id: check_changes
+        run: |
+          if [ -z "${{ steps.fetch_posts.outputs.blog_posts }}" ]; then
+            echo "No new blog posts found."
+            echo "changes=false" >> $GITHUB_ENV
+          else
+            echo "New blog posts found."
+            echo "changes=true" >> $GITHUB_ENV
+          fi
+
+      - name: Update README with latest blog posts
+        if: env.changes == 'true'
+        run: |
+          echo "## 📝 Latest Blog Posts" >> README.md
+          echo "${{ steps.fetch_posts.outputs.blog_posts }}" >> README.md
+
+      - name: Commit changes
+        if: env.changes == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update README with latest blog posts"
+          branch: main  # Specify the branch to push changes to
+          skip_checkout: true
+
+      - name: Notify if no changes were made
+        if: env.changes == 'false'
+        run: echo "No changes were made to the README."
