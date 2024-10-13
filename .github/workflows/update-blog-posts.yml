@@ -39,8 +39,7 @@ jobs:
         if: env.changes == 'false'
         run: |
           echo "Fetching last known blog post..."
-          # Hardcode the last known post or fetch it from a file
-          echo "- [Last Known Post](https://example.com/last-known-post)" >> README.md
+          echo "- [Last Known Post](https://mikeebuilds.tech/last-known-post)" >> README.md  # Update with the actual last known post URL
 
       - name: Update README with latest blog posts
         if: env.changes == 'true'
@@ -58,7 +57,3 @@ jobs:
           commit_message: "Update README with latest blog posts"
           branch: main  # Specify the branch to push changes to
           skip_checkout: true
-
-      - name: Notify if no changes were made
-        if: env.changes == 'false'
-        run: echo "No new changes were made to the README."
