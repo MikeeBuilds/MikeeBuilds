@@ -35,6 +35,14 @@ jobs:
             echo "changes=true" >> $GITHUB_ENV
           fi
 
+      - name: Fetch last known blog post if no new posts
+        if: env.changes == 'false'
+        run: |
+          echo "Fetching last known blog post..."
+          # Here you can define how to fetch the last known blog post
+          # For example, you can hardcode the last known post or fetch it from a file
+          echo "- [Last Known Post](https://example.com/last-known-post)" >> README.md
+
       - name: Update README with latest blog posts
         if: env.changes == 'true'
         run: |
@@ -45,7 +53,7 @@ jobs:
           echo "${{ steps.fetch_posts.outputs.blog_posts }}" >> README.md
 
       - name: Commit changes
-        if: env.changes == 'true'
+        if: env.changes == 'true' || env.changes == 'false'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update README with latest blog posts"
@@ -54,4 +62,4 @@ jobs:
 
       - name: Notify if no changes were made
         if: env.changes == 'false'
-        run: echo "No changes were made to the README."
+        run: echo "No new changes were made to the README."
