@@ -39,7 +39,7 @@ jobs:
         if: env.changes == 'false'
         run: |
           echo "Fetching last known blog post..."
-          echo "- [Last Known Post](https://mikeebuilds.tech/last-known-post)" >> README.md  # Update with the actual last known post URL
+          echo "- [Last Known Post](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer)" >> README.md  # Update with the actual last known post URL
 
       - name: Update README with latest blog posts
         if: env.changes == 'true'
