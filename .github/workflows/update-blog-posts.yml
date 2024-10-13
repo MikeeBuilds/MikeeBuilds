@@ -47,13 +47,16 @@ jobs:
           # Create a new section for blog posts if it doesn't exist
           if ! grep -q '## 📝 Latest Blog Posts' README.md; then
             echo "## 📝 Latest Blog Posts" >> README.md
+            echo "<!-- BLOG-POST-LIST:START -->" >> README.md
+            echo "<!-- BLOG-POST-LIST:END -->" >> README.md
           fi
-          echo "${{ steps.fetch_posts.outputs.blog_posts }}" >> README.md
+          # Replace content between markers
+          sed -i "/<!-- BLOG-POST-LIST:START -->/,/<!-- BLOG-POST-LIST:END -->/{//!d;}; /<!-- BLOG-POST-LIST:START -->/a ${{ steps.fetch_posts.outputs.blog_posts }}" README.md
 
       - name: Commit changes
         if: env.changes == 'true' || env.changes == 'false'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update README with latest blog posts"
-          branch: main  # Specify the branch to push changes to
-          skip_checkout: true
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git diff --quiet || (git commit -m "Update README with latest blog posts" && git push origin main)
