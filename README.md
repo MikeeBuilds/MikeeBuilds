@@ -44,9 +44,9 @@
   <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&random=${Math.random()}" alt="MikeeBuilds :: Profile Stats" />
 </div>
 
-<div align="center">
+
   ![Your Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=MikeeBuilds)
-</div>
+
 
 
 
