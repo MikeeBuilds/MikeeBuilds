@@ -23,7 +23,7 @@
 
 - **[Taskify AI](https://taskify-virid.vercel.app/)**: A drag-and-drop task manager that helps you organize your tasks efficiently.
 - **[AI Summarize](https://ai-summarize-psi.vercel.app/)**: An application that summarizes articles using GPT-4, making it easier to digest information quickly.
-- **[Milo Ai](https://milo.mobi)**: A minimal task manager app designed for simplicity and ease of use.
+- **[Milo Ai](https://milo.mobi)**: A minimal task manager app designed for simplicity and ease of use with drag-and-drop ability that helps you organize your tasks efficiently..
 - **Other Projects**: Various small side-projects that focus on learning and experimentation.
 
 
