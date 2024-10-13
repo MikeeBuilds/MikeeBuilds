@@ -39,8 +39,7 @@ jobs:
         if: env.changes == 'false'
         run: |
           echo "Fetching last known blog post..."
-          # Here you can define how to fetch the last known blog post
-          # For example, you can hardcode the last known post or fetch it from a file
+          # Hardcode the last known post or fetch it from a file
           echo "- [Last Known Post](https://example.com/last-known-post)" >> README.md
 
       - name: Update README with latest blog posts
