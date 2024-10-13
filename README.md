@@ -10,6 +10,8 @@
 
 - ## 📝 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+
+
 <!-- BLOG-POST-LIST:END -->
 
 ## Social media
@@ -89,7 +91,4 @@
 <p align="center"><img src="https://profile-counter.glitch.me/{AlgoHussle}/count.svg" alt="AlgoHussle :: Visitor's Count" /></p>
 
 <p align="center"><a href='https://archiveprogram.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif' width='40' height='40'></a> <a href='https://docs.github.com/en/developers'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif' width='40' height='40'></a> <a href='https://github.com/pricing'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif' width='40' height='40'></a> <a href='https://stars.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif' width='35' height='35'></a> <a href='https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif' width='35' height='35'></a></p>
-- [Last Known Post](https://example.com/last-known-post)
-- [Last Known Post](https://example.com/last-known-post)
-- [Last Known Post](https://mikeebuilds.tech/last-known-post)
-- [Last Known Post](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer)
+
