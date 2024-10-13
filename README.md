@@ -44,7 +44,7 @@
 
 
 - ## 📝 Latest Blog Posts
-<!-- BLOG-POST-LIST:START -->- [Essential APIs to Boost Your SaaS Development This Summer](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer) - Tue Jul 16 2024 1:59 PM- [Ai And Jobs - The impact of artificial           intelligence on employment](https://mikeebuilds.tech/ai-and-jobs-the-impact-of-artificial-intelligence-on-employment) - Mon Dec 25 2023 5:08 AM<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Essential APIs to Boost Your SaaS Development This Summer](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer) - Tue Jul 16 2024 1:59 PM -- [Ai And Jobs - The impact of artificial           intelligence on employment](https://mikeebuilds.tech/ai-and-jobs-the-impact-of-artificial-intelligence-on-employment) - Mon Dec 25 2023 5:08 AM -<!-- BLOG-POST-LIST:END -->
 
 
 
