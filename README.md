@@ -20,7 +20,6 @@
 ‎‎ [![Reddit User Karma](https://img.shields.io/reddit/user-karma/combined/mikeebuilds?label=Reddit&style=for-the-badge&logo=reddit&logoColor=ffffff)](https://www.reddit.com/user/MikeeBuilds)  
 ‎‎ [![Keybase PGP](https://img.shields.io/keybase/pgp/mikeebuilds?label=Keybase&logo=keybase&logoColor=ffffff&style=for-the-badge)](https://keybase.io/mikeebuilds)
 ‎‎ [![DockerHub Profile](https://img.shields.io/badge/DockerHub-mikeebuilds-informational?style=for-the-badge&logo=docker&logoColor=ffffff)](https://hub.docker.com/u/mikeebuilds)
-![Your Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=MikeeBuilds)
 
 ‎‎ 
 
@@ -45,7 +44,9 @@
   <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&random=${Math.random()}" alt="MikeeBuilds :: Profile Stats" />
 </div>
 
-  
+<div align="center">
+  ![Your Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=MikeeBuilds)
+</div>
 
 
 
