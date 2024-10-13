@@ -27,6 +27,7 @@ jobs:
       - name: Check if there are changes
         id: check_changes
         run: |
+          echo "Fetched posts: '${{ steps.fetch_posts.outputs.blog_posts }}'"
           if [ -z "${{ steps.fetch_posts.outputs.blog_posts }}" ]; then
             echo "No new blog posts found."
             echo "changes=false" >> $GITHUB_ENV
@@ -39,18 +40,17 @@ jobs:
         if: env.changes == 'false'
         run: |
           echo "Fetching last known blog post..."
-          echo "- [Last Known Post](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer)" >> README.md  # Update with the actual last known post URL
+          echo "- [Last Known Post](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer)" >> README.md
 
       - name: Update README with latest blog posts
         if: env.changes == 'true'
         run: |
-          # Create a new section for blog posts if it doesn't exist
+          echo "Updating README with new blog posts..."
           if ! grep -q '## 📝 Latest Blog Posts' README.md; then
             echo "## 📝 Latest Blog Posts" >> README.md
             echo "<!-- BLOG-POST-LIST:START -->" >> README.md
             echo "<!-- BLOG-POST-LIST:END -->" >> README.md
           fi
-          # Replace content between markers
           sed -i "/<!-- BLOG-POST-LIST:START -->/,/<!-- BLOG-POST-LIST:END -->/{//!d;}; /<!-- BLOG-POST-LIST:START -->/a ${{ steps.fetch_posts.outputs.blog_posts }}" README.md
 
       - name: Commit changes
@@ -58,5 +58,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
+          git add README.md
+          git diff --quiet || (git commit -m "Update README with latest blog posts" && git push origin main)
           git add README.md
           git diff --quiet || (git commit -m "Update README with latest blog posts" && git push origin main)
