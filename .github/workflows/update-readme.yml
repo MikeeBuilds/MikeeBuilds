@@ -1,0 +1,21 @@
+name: Update README with Latest Blog Post Image
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update Image in README
+        uses: siddharth2016/update-readme-image@0.1.1
+        with:
+          IMG_REPOSITORY: <your-username>/<your-repo>  # Replace with your repo
+          IMG_PATH: blog-post-list-output  # Path to your images
+          IMG_ALT: Latest Blog Post Image
