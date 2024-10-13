@@ -15,4 +15,4 @@
          - name: Update README with latest blog posts
            uses: gautamkrishnar/blog-post-workflow@master
            with:
-             feed_list: "https://mikeebuilds.tech/feed.xml"  # Replace with your blog's RSS feed URL
+             feed_list: "https://mikeebuilds.tech/rss.xml"  # Replace with your blog's RSS feed URL
