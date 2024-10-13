@@ -22,7 +22,7 @@ jobs:
         id: fetch_posts
         uses: ErrorGamer2000/github-readme-blog-post-action@v1
         with:
-          feed_urls: "https://mikeebuilds.tech/rss.xml"  # Replace with your blog's RSS feed URL
+          feed_urls: "https://mikeebuilds.tech/rss.xml"  # Your blog's RSS feed URL
 
       - name: Check if there are changes
         id: check_changes
@@ -38,7 +38,10 @@ jobs:
       - name: Update README with latest blog posts
         if: env.changes == 'true'
         run: |
-          echo "## 📝 Latest Blog Posts" >> README.md
+          # Create a new section for blog posts if it doesn't exist
+          if ! grep -q '## 📝 Latest Blog Posts' README.md; then
+            echo "## 📝 Latest Blog Posts" >> README.md
+          fi
           echo "${{ steps.fetch_posts.outputs.blog_posts }}" >> README.md
 
       - name: Commit changes
