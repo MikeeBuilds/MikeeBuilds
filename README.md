@@ -38,12 +38,7 @@
   <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&random=${Math.random()}" alt="MikeeBuilds :: Profile Stats" />
 </div>
 
-  <h2 align="center">GitHub Activity Graph</h2>
-
-<div align="center">
-    <img src="https://activity-graph.herokuapp.com/graph?username=MikeeBuilds&theme=react-dark" alt="MikeeBuilds's GitHub Activity Graph" />
-</div>
-
+  
 
 
 
