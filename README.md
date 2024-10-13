@@ -19,11 +19,12 @@
 ‎‎ 
 
 
-# Current projects
-- [Taskify AI](https://taskify-virid.vercel.app/) - Drag-and-drop Task Manager 
-- [AI Summarize](https://ai-summarize-psi.vercel.app/) - Summarize articles using GPT4
-- [Milo Ai](https://milo.mobi) - Minimal task manager app
-- Some other small side-projects that are not important enough to mention
+## Current Projects
+
+- **[Taskify AI](https://taskify-virid.vercel.app/)**: A drag-and-drop task manager that helps you organize your tasks efficiently.
+- **[AI Summarize](https://ai-summarize-psi.vercel.app/)**: An application that summarizes articles using GPT-4, making it easier to digest information quickly.
+- **[Milo Ai](https://milo.mobi)**: A minimal task manager app designed for simplicity and ease of use.
+- **Other Projects**: Various small side-projects that focus on learning and experimentation.
 
 
 
