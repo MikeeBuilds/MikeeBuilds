@@ -8,6 +8,10 @@
 - 📫 I do write blogs about tech & outdoor topics and scroll through LinkedIn pretty often.
 - ❓ Want to know more about me? You can always contact me via several social medias!
 
+- ## 📝 Latest Blog Posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
 ## Social media
 
 
