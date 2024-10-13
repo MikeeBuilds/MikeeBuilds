@@ -21,7 +21,7 @@ jobs:
         with:
           feed_list: "https://mikeebuilds.tech/rss.xml"
           max_post_count: 5
-          template: "- [$title]($url) - $date"
+          template: "- [$title]($url) - $date - "
           commit_message: "Update README with latest blog posts"
           committer_username: "github-actions[bot]"
           committer_email: "github-actions[bot]@users.noreply.github.com"
