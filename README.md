@@ -45,9 +45,6 @@
 </div>
 
 
-  ![Your Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=MikeeBuilds)
-  [![Milo](https://github-readme-stats.vercel.app/api/pin/?username=mikeebuilds&repo=milo)](https://github.com/mikeebuilds/3D-portfolio)
-
 
 
 
