@@ -10,8 +10,6 @@
 
 - ## 📝 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
-
-
 <!-- BLOG-POST-LIST:END -->
 
 ## Social media
@@ -22,6 +20,8 @@
 ‎‎ [![Reddit User Karma](https://img.shields.io/reddit/user-karma/combined/mikeebuilds?label=Reddit&style=for-the-badge&logo=reddit&logoColor=ffffff)](https://www.reddit.com/user/MikeeBuilds)  
 ‎‎ [![Keybase PGP](https://img.shields.io/keybase/pgp/mikeebuilds?label=Keybase&logo=keybase&logoColor=ffffff&style=for-the-badge)](https://keybase.io/mikeebuilds)
 ‎‎ [![DockerHub Profile](https://img.shields.io/badge/DockerHub-mikeebuilds-informational?style=for-the-badge&logo=docker&logoColor=ffffff)](https://hub.docker.com/u/mikeebuilds)
+![Your Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=MikeeBuilds)
+
 ‎‎ 
 
 
