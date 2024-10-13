@@ -22,7 +22,7 @@ jobs:
         id: fetch_posts
         uses: ErrorGamer2000/github-readme-blog-post-action@v1
         with:
-          feed_urls: "https://mikeebuild.tech/feed.xml"  # Replace with your blog's RSS feed URL
+          feed_urls: "https://mikeebuilds.tech/rss.xml"  # Replace with your blog's RSS feed URL
 
       - name: Check if there are changes
         id: check_changes
