@@ -46,7 +46,7 @@
 
 
   ![Your Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=MikeeBuilds)
-  [![Milo](https://github-readme-stats.vercel.app/api/pin/?mikeebuilds=mikeebuilds&repo=milo)](https://github.com/mikeebuilds/milo)
+  [![Milo](https://github-readme-stats.vercel.app/api/pin/?username=mikeebuilds&repo=milo)](https://github.com/mikeebuilds/milo)
 
 
 
