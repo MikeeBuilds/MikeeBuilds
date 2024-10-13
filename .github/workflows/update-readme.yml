@@ -1,9 +1,11 @@
 name: Update README with Latest Blog Post Image
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 * * * *'  # Runs every hour
-  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   update-readme:
@@ -13,9 +15,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Update Image in README
-        uses: siddharth2016/update-readme-image@0.1.1
+      - name: Fetch latest blog posts
+        id: fetch_posts
+        uses: ErrorGamer2000/github-readme-blog-post-action@v1
         with:
-          IMG_REPOSITORY: <your-username>/<your-repo>  # Replace with your repo
-          IMG_PATH: blog-post-list-output  # Path to your images
-          IMG_ALT: Latest Blog Post Image
+          feed_urls: "https://mikeebuilds.tech/rss.xml"
+
+      - name: Update README with latest blog post image
+        run: |
+          echo "Updating README with new blog post image..."
+          IMAGE_PATH="blog-post-list-output/AI_and_Jobs__The_Impact_of_Artificial_Intelligence_on_Employment.svg"  # Update this dynamically based on your logic
+          sed -i "/<!-- IMAGE-SECTION:START -->/,/<!-- IMAGE-SECTION:END -->/{//!d;}; /<!-- IMAGE-SECTION:START -->/a ![Latest Blog Post Image]($IMAGE_PATH)" README.md
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git diff --quiet || (git commit -m "Update README with latest blog post image" && git push origin main)
