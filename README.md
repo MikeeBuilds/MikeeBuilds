@@ -1,87 +1,108 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+GM!+I'm+Mike;Thanks+for+checking+out+my+GitHub+page!;%E2%AD%90+Any+questions+you+may+have;Feel+free+to+get+in+touch+with+me!)](https://git.io/typing-svg)
-
-
-- 🧑🏾‍💻 I'm some sort of a full-stack developer? If [this](https://www.w3schools.com/whatis/whatis_fullstack.asp) description makes me a full-stack developer.
-- 🌱 I work a lot with Javascript especially with NodeJS and have been loving threejs and Nextjs
-- 🐟 When Im not coding Im usually spending time outdoors or hiking or fishing, Exploring new public lands or teaching my kids how to ride bikes.
-- 🖇️ I like to discuss coding with others and learn more. So dont hesitate to send me a DM!
-- 📫 I do write blogs about tech & outdoor topics and scroll through LinkedIn pretty often.
-- ❓ Want to know more about me? You can always contact me via several social medias!
-
-
-
-## Social media
-
-
-‎‎ [![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-ludlow-51b3b2257/)
-‎‎ [![Stack Exchange reputation](https://img.shields.io/stackexchange/stackoverflow/r/12418331?color=%23F48024&label=Stack%20overflow&style=for-the-badge&logo=stackoverflow&logoColor=ffffff)](https://stackoverflow.com/users/21367496/algo)
-‎‎ [![Reddit User Karma](https://img.shields.io/reddit/user-karma/combined/mikeebuilds?label=Reddit&style=for-the-badge&logo=reddit&logoColor=ffffff)](https://www.reddit.com/user/MikeeBuilds)  
-‎‎ [![Keybase PGP](https://img.shields.io/keybase/pgp/mikeebuilds?label=Keybase&logo=keybase&logoColor=ffffff&style=for-the-badge)](https://keybase.io/mikeebuilds)
-‎‎ [![DockerHub Profile](https://img.shields.io/badge/DockerHub-mikeebuilds-informational?style=for-the-badge&logo=docker&logoColor=ffffff)](https://hub.docker.com/u/mikeebuilds)
-
-‎‎ 
-
-
-## Current Projects
-
-
-- **[Milo Ai](https://milo.mobi)**: A minimal task manager app designed for simplicity and ease of use with drag-and-drop ability that helps you organize your tasks efficiently..
-- **[AI Summarize](https://ai-summarize-psi.vercel.app/)**: An application that summarizes articles using GPT-4, making it easier to digest information quickly.
-- **Other Projects**: Various small side-projects that focus on learning and experimentation.
-
-
-
-
-<h2 align="center">Github stats :bar_chart:</h2>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark&random=${Math.random()}" alt="MikeeBuilds :: Top Langs">
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&random=${Math.random()}" alt="MikeeBuilds :: Profile Stats" />
-</div>
-
-
-- ## 📝 Latest Blog Posts
-<!-- BLOG-POST-LIST:START -->- [Essential APIs to Boost Your SaaS Development This Summer](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer) - Tue Jul 16 2024 1:59 PM -- [Ai And Jobs - The impact of artificial           intelligence on employment](https://mikeebuilds.tech/ai-and-jobs-the-impact-of-artificial-intelligence-on-employment) - Mon Dec 25 2023 5:08 AM -<!-- BLOG-POST-LIST:END -->
-
-
-
-
-
-
-
-
-
+<!-- GitHub Profile README for MikeeBuilds -->
 
 <p align="center">
-  <h2 align="center">🛠️ Languages </h2>
-  <table align="center">
-    <tr>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=typescript"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=javascript"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=css"></a></td>
-    </tr>
-    <tr>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=express"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=discord"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=twitter"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=next"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=tailwind"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=firebase"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=stackoverflow"></a></td>
-    </tr>
-  </table>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+GM!+I'm+Mike;Thanks+for+checking+out+my+GitHub+page!;%E2%AD%90+Any+questions+you+may+have;Feel+free+to+get+in+touch+with+me!" alt="Typing SVG">
+  </a>
 </p>
 
+---
 
+- 🧑🏾‍💻 I'm some sort of a full-stack developer? If [this](https://www.w3schools.com/whatis/whatis_fullstack.asp) description makes me a full-stack developer.
+- 🌱 I work a lot with JavaScript, especially Node.js. Been loving Three.js and Next.js lately.
+- 🐟 When I'm not coding, I'm hiking, fishing, exploring public lands, or teaching my kids to ride bikes.
+- 🖇️ I love discussing code and learning with others — feel free to DM me!
+- 📫 I write tech & outdoor blogs and scroll through LinkedIn more than I should.
+- ❓ Want to connect? Reach out on any of the platforms below!
 
+---
 
+## 🌐 Connect with Me
+
+[![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-ludlow-51b3b2257/)
+[![Stack Overflow](https://img.shields.io/stackexchange/stackoverflow/r/12418331?color=%23F48024&label=Stack%20Overflow&style=for-the-badge&logo=stackoverflow&logoColor=white)](https://stackoverflow.com/users/21367496/algo)
+[![Reddit](https://img.shields.io/reddit/user-karma/combined/mikeebuilds?label=Reddit&style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/MikeeBuilds)
+[![Keybase](https://img.shields.io/keybase/pgp/mikeebuilds?label=Keybase&logo=keybase&logoColor=white&style=for-the-badge)](https://keybase.io/mikeebuilds)
+[![DockerHub](https://img.shields.io/badge/DockerHub-mikeebuilds-informational?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/u/mikeebuilds)
+
+---
+
+## 🚀 Current Projects
+
+- 🔹 **[Milo AI](https://milo.mobi)** – Minimal task manager with drag-and-drop and built-in AI.
+- 🔹 **[AI Summarize](https://ai-summarize-psi.vercel.app/)** – Summarizes long-form articles using GPT-4.
+- 🔹 **Other Experiments** – A steady stream of small projects and dev prototypes.
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark&cache_seconds=1800" alt="Top Langs">
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&cache_seconds=1800" alt="Profile Stats">
+</div>
+
+---
+
+## 📝 Latest Blog Posts
+
+- [Essential APIs to Boost Your SaaS Development This Summer](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer) – Jul 16, 2024  
+- [AI and Jobs: The Impact of Artificial Intelligence on Employment](https://mikeebuilds.tech/ai-and-jobs-the-impact-of-artificial-intelligence-on-employment) – Dec 25, 2023  
+
+> *(Note: Want this section auto-updating? Set up [blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow) GitHub Action.)*
+
+---
+
+## 🛠️ Languages & Tools
+
+<h2 align="center">🛠️ Languages & Tools</h2>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,typescript,javascript,react,nodejs,html,css,express,discord,twitter,next,tailwind,firebase,stackoverflow" />
+  </a>
+</p>
+
+---
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=MikeeBuilds&theme=radical&margin-w=15&margin-h=15" alt="Trophies">
+</p>
+
+---
+
+## 👁️ Visitor Count
+
+<p align="center">
+  <img src="https://profile-counter.glitch.me/MikeeBuilds/count.svg" alt="Visitor Count">
+</p>
+
+---
+
+## 🎖️ GitHub Flair
+
+<p align="center">
+  <a href="https://archiveprogram.github.com/">
+    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif" width="40" height="40" alt="GitHub Archive Contributor">
+  </a>
+  <a href="https://docs.github.com/en/developers">
+    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" width="40" height="40" alt="GitHub Developer">
+  </a>
+  <a href="https://github.com/pricing">
+    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif" width="40" height="40" alt="GitHub Pro">
+  </a>
+  <a href="https://stars.github.com/">
+    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif" width="35" height="35" alt="GitHub Star">
+  </a>
+  <a href="https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors">
+    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif" width="35" height="35" alt="GitHub Sponsor">
+  </a>
+</p>
 
 
 
