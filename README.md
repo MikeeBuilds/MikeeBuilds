@@ -1,4 +1,3 @@
-<!-- GitHub Profile README for MikeeBuilds -->
 
 <p align="center">
   <a href="https://git.io/typing-svg">
@@ -38,7 +37,7 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MikeeBuilds&show_icons=true&locale=en&theme=chartreuse-dark&cache_seconds=1800" alt="Top Langs">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=chartreuse-dark&langs_count=10&cache_seconds=1800" alt="Top Langs">
 </div>
 
 <div align="center">
@@ -62,7 +61,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,typescript,javascript,react,nodejs,html,css,express,discord,twitter,next,tailwind,firebase,stackoverflow" />
+    <img src="https://skillicons.dev/icons?i=python,typescript,javascript,react,nodejs,html,css,express,discord,twitter,next,tailwind,firebase,stackoverflow,swift" />
   </a>
 </p>
 
@@ -79,7 +78,7 @@
 ## 👁️ Visitor Count
 
 <p align="center">
-  <img src="https://profile-counter.glitch.me/MikeeBuilds/count.svg" alt="Visitor Count">
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/MikeeBuilds&count_bg=%2307D8FF&title_bg=%23000000&icon=github.svg&icon_color=%23ffffff&title=Visitors&edge_flat=false" alt="Visitor Count">
 </p>
 
 ---
@@ -87,29 +86,7 @@
 ## 🎖️ GitHub Flair
 
 <p align="center">
-  <a href="https://archiveprogram.github.com/">
-    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif" width="40" height="40" alt="GitHub Archive Contributor">
-  </a>
-  <a href="https://docs.github.com/en/developers">
-    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" width="40" height="40" alt="GitHub Developer">
-  </a>
-  <a href="https://github.com/pricing">
-    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif" width="40" height="40" alt="GitHub Pro">
-  </a>
-  <a href="https://stars.github.com/">
-    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif" width="35" height="35" alt="GitHub Star">
-  </a>
-  <a href="https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors">
-    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif" width="35" height="35" alt="GitHub Sponsor">
-  </a>
+  <img src="https://img.shields.io/badge/GitHub-Pro-blueviolet?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Open%20Source-Star-yellow?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Sponsor-Love-red?style=for-the-badge&logo=github-sponsors" />
 </p>
-
-
-
-
-
-<h4 align="center">Visitor's count :eyes:</h4>
-![Visitor Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/MikeeBuilds&count_bg=%2307D8FF&title_bg=%23000000&icon=github.svg&icon_color=%23ffffff&title=Visitors&edge_flat=false)
-
-<p align="center"><a href='https://archiveprogram.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif' width='40' height='40'></a> <a href='https://docs.github.com/en/developers'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif' width='40' height='40'></a> <a href='https://github.com/pricing'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif' width='40' height='40'></a> <a href='https://stars.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif' width='35' height='35'></a> <a href='https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif' width='35' height='35'></a></p>
-
