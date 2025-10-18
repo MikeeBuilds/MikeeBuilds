@@ -1,4 +1,3 @@
-
 <p align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+GM!+I'm+Mike;Thanks+for+checking+out+my+GitHub+page!;%E2%AD%90+Any+questions+you+may+have;Feel+free+to+get+in+touch+with+me!" alt="Typing SVG">
@@ -33,16 +32,6 @@
 - 🔹 **Other Experiments** – A steady stream of small projects and dev prototypes.
 
 ---
-
-## 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=chartreuse-dark&langs_count=10&cache_seconds=1800" alt="Top Langs">
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&cache_seconds=1800" alt="Profile Stats">
-</div>
 
 ## 📊 GitHub Stats
 
@@ -87,7 +76,6 @@
 </p>
 
 ---
-
 
 ## 🎖️ GitHub Flair
 
