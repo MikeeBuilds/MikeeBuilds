@@ -44,10 +44,17 @@
   <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&cache_seconds=1800" alt="Profile Stats">
 </div>
 
+## 📊 GitHub Stats
+
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=MikeeBuilds&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/MikeeBuilds?label=Followers&style=flat&color=0e75b6" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/MikeeBuilds?label=Stars&style=flat&color=0e75b6" alt="Stars" />
+  <!-- Profile Summary Card -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MikeeBuilds&theme=tokyonight" />
+
+  <!-- Top Languages -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/top-languages?username=MikeeBuilds&layout=compact&theme=tokyonight" />
+
+  <!-- Commits & Streak (alternative combo) -->
+  <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=false" />
 </p>
 
 ---
