@@ -44,6 +44,12 @@
   <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=chartreuse-dark&cache_seconds=1800" alt="Profile Stats">
 </div>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=MikeeBuilds&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/MikeeBuilds?label=Followers&style=flat&color=0e75b6" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/MikeeBuilds?label=Stars&style=flat&color=0e75b6" alt="Stars" />
+</p>
+
 ---
 
 ## 📝 Latest Blog Posts
