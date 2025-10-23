@@ -1,3 +1,4 @@
+<!-- Typing Intro -->
 <p align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+GM!+I'm+Mike;Thanks+for+checking+out+my+GitHub+page!;%E2%AD%90+Any+questions+you+may+have;Feel+free+to+get+in+touch+with+me!" alt="Typing SVG">
@@ -5,6 +6,8 @@
 </p>
 
 ---
+
+## 👨🏾‍💻 About Me
 
 - 🧑🏾‍💻 I'm some sort of a full-stack developer? If [this](https://www.w3schools.com/whatis/whatis_fullstack.asp) description makes me a full-stack developer.
 - 🌱 I work a lot with JavaScript, especially Node.js. Been loving Three.js and Next.js lately.
@@ -33,18 +36,15 @@
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Stats (Stacked & Clean)
 
 <p align="center">
-  <!-- Profile Summary -->
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MikeeBuilds&theme=tokyonight" />
 </p>
-
 <p align="center">
-  <!-- Top Languages -->
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/top-languages?username=MikeeBuilds&layout=compact&theme=tokyonight" />
-  
-  <!-- Streak -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight" />
+</p>
+<p align="center">
   <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=false" />
 </p>
 
@@ -60,8 +60,6 @@
 ---
 
 ## 🛠️ Languages & Tools
-
-<h2 align="center">🛠️ Languages & Tools</h2>
 
 <p align="center">
   <a href="https://skillicons.dev">
