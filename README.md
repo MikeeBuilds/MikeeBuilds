@@ -36,13 +36,11 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <!-- Profile Summary Card -->
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MikeeBuilds&theme=tokyonight" />
+</p>
 
-  <!-- Top Languages -->
+<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/top-languages?username=MikeeBuilds&layout=compact&theme=tokyonight" />
-
-  <!-- Commits & Streak (alternative combo) -->
   <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=false" />
 </p>
 
