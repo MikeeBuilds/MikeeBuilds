@@ -55,7 +55,6 @@
 - [Essential APIs to Boost Your SaaS Development This Summer](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer) – Jul 16, 2024  
 - [AI and Jobs: The Impact of Artificial Intelligence on Employment](https://mikeebuilds.tech/ai-and-jobs-the-impact-of-artificial-intelligence-on-employment) – Dec 25, 2023  
 
-> *(Note: Want this section auto-updating? Set up [blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow) GitHub Action.)*
 
 ---
 
