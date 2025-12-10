@@ -3,14 +3,14 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
 </p>
 
-# 👨🏾‍💻 Michael Ludlow
+# 👨🏾‍💻 Mikee Builds
 ### Full Stack Engineer & Quant Developer
 
 I build autonomous trading systems and high-performance financial infrastructure. Currently architecting **[BlackCircleTerminal.com](https://blackcircleterminal.com)**, a next-generation platform for retail quantitative trading and options analytics.
 
 ---
 
-## � Active Development
+## 🚀 Active Development
 
 ### 📉 [BlackCircleTerminal](https://blackcircleterminal.com)
 **The Operating System for Retail Quants.**  
@@ -44,19 +44,17 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 
 ---
 
-## 📊 Engineering Metrics
+## 📊 Engineering Activity
 
+<!-- Activity Graph (Heroku Host - Usually Unblocked) -->
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MikeeBuilds&theme=tokyonight&margin-w=15&margin-h=15&no-bg=true" alt="trophies" />
+  <img src="https://activity-graph.herokuapp.com/graph?username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true" alt="Activity Graph" />
 </div>
 
 <div align="center">
   <br>
+  <!-- Streak Stats (DemoLab Host - Robust) -->
   <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117" alt="streak" />
-</div>
-
-<div align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MikeeBuilds&theme=tokyonight" alt="summary" />
 </div>
 
 ---
