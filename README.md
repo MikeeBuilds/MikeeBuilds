@@ -47,8 +47,8 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 ## 📊 Engineering Metrics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" height="180" alt="stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&langs_count=6" height="180" alt="languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight" height="180" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight" height="180" alt="languages" />
 </div>
 
 <div align="center">
