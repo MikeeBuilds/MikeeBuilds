@@ -1,85 +1,70 @@
-<!-- Typing Intro -->
+<!-- Header -->
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+GM!+I'm+Mike;Thanks+for+checking+out+my+GitHub+page!;%E2%AD%90+Any+questions+you+may+have;Feel+free+to+get+in+touch+with+me!" alt="Typing SVG">
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
 </p>
 
----
+# 👨🏾‍💻 Michael Ludlow
+### Full Stack Engineer & Quant Developer
 
-## 👨🏾‍💻 About Me
-
-- 🧑🏾‍💻 I'm some sort of a full-stack developer? If [this](https://www.w3schools.com/whatis/whatis_fullstack.asp) description makes me a full-stack developer.
-- 🌱 I work a lot with JavaScript, especially Node.js. Been loving Three.js and Next.js lately.
-- 🐟 When I'm not coding, I'm hiking, fishing, exploring public lands, or teaching my kids to ride bikes.
-- 🖇️ I love discussing code and learning with others — feel free to DM me!
-- 📫 I write tech & outdoor blogs and scroll through LinkedIn more than I should.
-- ❓ Want to connect? Reach out on any of the platforms below!
+I build autonomous trading systems and high-performance financial infrastructure. Currently architecting **[BlackCircleTerminal.com](https://blackcircleterminal.com)**, a next-generation platform for retail quantitative trading and options analytics.
 
 ---
 
-## 🌐 Connect with Me
+## � Active Development
 
-[![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-ludlow-51b3b2257/)
-[![Stack Overflow](https://img.shields.io/stackexchange/stackoverflow/r/12418331?color=%23F48024&label=Stack%20Overflow&style=for-the-badge&logo=stackoverflow&logoColor=white)](https://stackoverflow.com/users/21367496/algo)
-[![Reddit](https://img.shields.io/reddit/user-karma/combined/mikeebuilds?label=Reddit&style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/MikeeBuilds)
-[![Keybase](https://img.shields.io/keybase/pgp/mikeebuilds?label=Keybase&logo=keybase&logoColor=white&style=for-the-badge)](https://keybase.io/mikeebuilds)
-[![DockerHub](https://img.shields.io/badge/DockerHub-mikeebuilds-informational?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/u/mikeebuilds)
+### 📉 [BlackCircleTerminal](https://blackcircleterminal.com)
+**The Operating System for Retail Quants.**  
+Building an institutional-grade terminal for retail traders, featuring:
+- **Autonomous Agents:** AI-driven market analysis and trade execution.
+- **Options Analytics:** Real-time volatility surfaces and greek hedging strategies.
+- **Community:** Integrated Discord signal processing and sentiment analysis.
 
----
-
-## 🚀 Current Projects
-
-- 🔹 **[Milo AI](https://milo.mobi)** – Minimal task manager with drag-and-drop and built-in AI.
-- 🔹 **[AI Summarize](https://ai-summarize-psi.vercel.app/)** – Summarizes long-form articles using GPT-4.
-- 🔹 **Other Experiments** – A steady stream of small projects and dev prototypes.
+### 🦅 [Squadron](https://github.com/MikeeBuilds/Squadron)
+**Agentic Workflow Orchestrator.**  
+An open-source library bridging the gap between LLM agents and real-world tools (Jira, Slack, GitHub).
 
 ---
 
-## 📊 GitHub Stats (Stacked & Clean)
+## 🛠️ Technical Arsenal
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MikeeBuilds&theme=tokyonight" />
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight" />
-</p>
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=false" />
-</p>
-
----
-
-## 📝 Latest Blog Posts
-
-- [Essential APIs to Boost Your SaaS Development This Summer](https://mikeebuilds.tech/essential-apis-to-boost-your-saas-development-this-summer) – Jul 16, 2024  
-- [AI and Jobs: The Impact of Artificial Intelligence on Employment](https://mikeebuilds.tech/ai-and-jobs-the-impact-of-artificial-intelligence-on-employment) – Dec 25, 2023  
-
+<table align="center">
+  <tr>
+    <td align="center" width="900px">
+      <img src="https://skillicons.dev/icons?i=python,typescript,rust,go,cpp&perline=10" /><br>
+      <b>Core Languages</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,postgres,redis,kubernetes,docker,tensorflow,pytorch&perline=10" /><br>
+      <b>Stack & Infrastructure</b>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🛠️ Languages & Tools
+## 📊 Engineering Metrics
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,typescript,javascript,react,nodejs,html,css,express,discord,twitter,next,tailwind,firebase,stackoverflow,swift" />
-  </a>
-</p>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" height="180" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&langs_count=6" height="180" alt="languages" />
+</div>
 
----
-
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MikeeBuilds&theme=radical&margin-w=15&margin-h=15" alt="Trophies">
-</p>
+<div align="center">
+  <br>
+  <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117" alt="streak" />
+</div>
 
 ---
 
-## 🎖️ GitHub Flair
+## 🌐 Connect
 
-<p align="center">
-  <img src="https://img.shields.io/badge/GitHub-Pro-blueviolet?style=for-the-badge&logo=github" />
-  <img src="https://img.shields.io/badge/Open%20Source-Star-yellow?style=for-the-badge&logo=github" />
-  <img src="https://img.shields.io/badge/Sponsor-Love-red?style=for-the-badge&logo=github-sponsors" />
-</p>
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-ludlow-51b3b2257/)
+[![Twitter](https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/MikeeBuilds)
+[![Discord](https://img.shields.io/badge/Discord-Join_BCT-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-link)
+[![Website](https://img.shields.io/badge/BlackCircleTerminal.com-Visit-00FF99?style=for-the-badge&logo=google-chrome&logoColor=black&labelColor=00FF99)](https://blackcircleterminal.com)
+
+</div>
