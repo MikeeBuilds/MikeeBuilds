@@ -3,7 +3,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
 </p>
 
-# 👨🏾‍💻 Mikee Builds
+# 👨🏾‍💻 Michael Ludlow
 ### Full Stack Engineer & Quant Developer
 
 I build autonomous trading systems and high-performance financial infrastructure. Currently architecting **[BlackCircleTerminal.com](https://blackcircleterminal.com)**, a next-generation platform for retail quantitative trading and options analytics.
@@ -46,15 +46,15 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 
 ## 📊 Engineering Activity
 
-<!-- Activity Graph (Heroku Host - Usually Unblocked) -->
 <div align="center">
-  <img src="https://activity-graph.herokuapp.com/graph?username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true" alt="Activity Graph" />
+  <!-- Metrics.lecoq.io - The All-in-One Professional Dashboard -->
+  <img src="https://metrics.lecoq.io/MikeeBuilds?template=classic&base=header,activity,community,repositories,metadata&config.timezone=America%2FNew_York&config.order=base.header,base.activity+base.community,base.repositories,base.metadata" alt="Metrics Dashboard" width="100%" />
 </div>
 
 <div align="center">
   <br>
-  <!-- Streak Stats (DemoLab Host - Robust) -->
-  <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117" alt="streak" />
+  <!-- Activity Graph (Heroku) -->
+  <img src="https://activity-graph.herokuapp.com/graph?username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true" alt="Activity Graph" />
 </div>
 
 ---
