@@ -3,9 +3,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
 </p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=MikeeBuilds&style=flat-square&color=00FF99&label=PROFILE+VIEWS" alt="Profile Views" />
-</p>
 
 # 👨🏾‍💻 Michael Ludlow
 ### Full Stack Engineer & Quant Developer
