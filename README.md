@@ -50,14 +50,21 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 
 ## 📊 Engineering Activity
 
+<!-- Stats & Languages (Graph Mode) -->
 <div align="center">
-  <!-- Metrics.lecoq.io - The All-in-One Professional Dashboard -->
-  <img src="https://metrics.lecoq.io/MikeeBuilds?template=classic&base=header,activity,community,repositories,metadata&config.timezone=America%2FNew_York&config.order=base.header,base.activity+base.community,base.repositories,base.metadata" alt="Metrics Dashboard" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&cache_seconds=86400" height="180" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&cache_seconds=86400" height="180" alt="languages" />
 </div>
 
 <div align="center">
   <br>
-  <!-- Activity Graph (Heroku) -->
+  <!-- Streak Stats (Fire Graph) -->
+  <img src="https://streak-stats.demolab.com?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117" alt="streak" />
+</div>
+
+<div align="center">
+  <br>
+  <!-- Activity Graph (Line Graph) -->
   <img src="https://activity-graph.herokuapp.com/graph?username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true" alt="Activity Graph" />
 </div>
 
