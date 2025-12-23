@@ -1,6 +1,6 @@
 <!-- Header -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab. com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com? font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
 </p>
 
 
@@ -15,8 +15,8 @@ I build autonomous trading systems and high-performance financial infrastructure
 
 ### 📉 [BlackCircleTerminal](https://blackcircleterminal.com)
 **The Operating System for Retail Quants.**  
-Building an institutional-grade terminal for retail traders, featuring: 
-- **Autonomous Agents:** AI-driven market analysis and trade execution.
+Building an institutional-grade terminal for retail traders, featuring:
+- **Autonomous Agents:** AI-driven market analysis and trade execution. 
 - **Options Analytics:** Real-time volatility surfaces and greek hedging strategies.
 - **Community:** Integrated Discord signal processing and sentiment analysis.
 
@@ -49,25 +49,22 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 
 <div align="center">
   
-<!-- Streak Stats -->
-<img src="https://github-readme-streak-stats.herokuapp.com/? user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=00FF99" alt="GitHub Streak" />
+![GitHub Streak](https://nirzak-streak-stats.vercel.app/? user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=00FF99)
 
 </div>
 
 <div align="center">
   <br>
   
-<!-- Stats & Languages -->
-<img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&icon_color=00FF99&text_color=FFFFFF" height="180" alt="GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&text_color=FFFFFF" height="180" alt="Top Languages" />
+![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api? username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&icon_color=00FF99&text_color=FFFFFF)
+![Top Languages](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&text_color=FFFFFF)
 
 </div>
 
 <div align="center">
   <br>
   
-<!-- Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph? username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true" alt="Contribution Graph" width="95%" />
+![Contribution Graph](https://github-readme-activity-graph.vercel. app/graph?username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true)
 
 </div>
 
@@ -79,7 +76,7 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-ludlow-51b3b2257/)
 [![Twitter](https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/MikeeBuilds)
-[![Discord](https://img.shields.io/badge/Discord-Join_BCT-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-link)
-[![Website](https://img.shields.io/badge/BlackCircleTerminal.com-Visit-00FF99?style=for-the-badge&logo=google-chrome&logoColor=black&labelColor=00FF99)](https://blackcircleterminal.com)
+[![Discord](https://img.shields.io/badge/Discord-Join_BCT-5865F2? style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-link)
+[![Website](https://img.shields.io/badge/BlackCircleTerminal. com-Visit-00FF99?style=for-the-badge&logo=google-chrome&logoColor=black&labelColor=00FF99)](https://blackcircleterminal.com)
 
 </div>
