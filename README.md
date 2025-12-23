@@ -1,13 +1,13 @@
 <!-- Header -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Systems;Full+Stack+%2B+Quant+Dev" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab. com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
 </p>
 
 
 # 👨🏾‍💻 Michael Ludlow
 ### Full Stack Engineer & Quant Developer
 
-I build autonomous trading systems and high-performance financial infrastructure. Currently architecting **[BlackCircleTerminal.com](https://blackcircleterminal.com)**, a next-generation platform for retail quantitative traders.
+I build autonomous trading systems and high-performance financial infrastructure. Currently architecting **[BlackCircleTerminal.com](https://blackcircleterminal.com)**, a next-generation platform for retail quantitative trading and options analytics.
 
 ---
 
@@ -15,7 +15,7 @@ I build autonomous trading systems and high-performance financial infrastructure
 
 ### 📉 [BlackCircleTerminal](https://blackcircleterminal.com)
 **The Operating System for Retail Quants.**  
-Building an institutional-grade terminal for retail traders, featuring:   
+Building an institutional-grade terminal for retail traders, featuring: 
 - **Autonomous Agents:** AI-driven market analysis and trade execution.
 - **Options Analytics:** Real-time volatility surfaces and greek hedging strategies.
 - **Community:** Integrated Discord signal processing and sentiment analysis.
@@ -47,22 +47,28 @@ An open-source library bridging the gap between LLM agents and real-world tools 
 
 ## 📊 Engineering Activity
 
-<!-- Stats & Languages (Graph Mode) -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel. app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true" height="180" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true&langs_count=8" height="180" alt="Top Languages" />
+  
+<!-- Streak Stats -->
+<img src="https://github-readme-streak-stats.herokuapp.com/? user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=00FF99" alt="GitHub Streak" />
+
 </div>
 
 <div align="center">
   <br>
-  <!-- Streak Stats (Fire Graph) -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MikeeBuilds&theme=tokyonight&hide_border=false" alt="GitHub Streak Stats" />
+  
+<!-- Stats & Languages -->
+<img src="https://github-readme-stats.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&icon_color=00FF99&text_color=FFFFFF" height="180" alt="GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&text_color=FFFFFF" height="180" alt="Top Languages" />
+
 </div>
 
 <div align="center">
   <br>
-  <!-- Activity Graph (Line Graph) -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MikeeBuilds&bg_color=1a1b27&color=00ff99&line=00ff99&point=ffffff&area=true&hide_border=false&theme=tokyo-night" alt="Activity Graph" width="95%" />
+  
+<!-- Activity Graph -->
+<img src="https://github-readme-activity-graph.vercel.app/graph? username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true" alt="Contribution Graph" width="95%" />
+
 </div>
 
 ---
