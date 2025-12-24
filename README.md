@@ -124,7 +124,7 @@ Building an institutional-grade terminal for retail traders, featuring:
 <div align="center">
   <br>
   
-![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&icon_color=00FF99&text_color=FFFFFF)
+![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&icon_color=00FF99&text_color=FFFFFF&count_private=true&include_all_commits=true)
 ![Top Languages](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&text_color=FFFFFF)
 
 </div>
