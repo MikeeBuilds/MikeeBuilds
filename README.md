@@ -28,7 +28,7 @@ I build autonomous trading systems and high-performance financial infrastructure
 
 </div>
 
-> 🤖 **[Auto-Claude](https://github.com/AndyMik90/Auto-Claude)** - Contributing to the autonomous multi-agent coding framework. Helping with issue triage and feature development.
+> 🤖 **[Aparent](https://github.com/AndyMik90/Auto-Claude)** - Contributing to the autonomous multi-agent coding framework. Helping with issue triage and feature development.
 
 ---
 
