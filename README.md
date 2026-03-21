@@ -22,7 +22,7 @@ I build autonomous trading systems and high-performance financial infrastructure
 
 <div align="center">
 
-[![Auto-Claude](https://img.shields.io/badge/Auto--Claude-Contributor-D6D876?style=for-the-badge&logo=github&logoColor=black)](https://github.com/AndyMik90/Auto-Claude)
+[![Aparent](https://img.shields.io/badge/Auto--Claude-Contributor-D6D876?style=for-the-badge&logo=github&logoColor=black)](https://github.com/AndyMik90/Auto-Claude)
 [![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=for-the-badge)](https://opensource.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](https://github.com/AndyMik90/Auto-Claude/pulls)
 
