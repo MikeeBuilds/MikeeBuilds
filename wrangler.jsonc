@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mikeebuilds-github-stats",
+  "account_id": "6ab763c3afab27d4c4cef608d1955aa7",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-08-17",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  }
+}

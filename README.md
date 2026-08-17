@@ -117,15 +117,15 @@ Building an institutional-grade terminal for retail traders, featuring:
 
 <div align="center">
   
-![GitHub Streak](https://streak-stats.demolab.com/?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=00FF99)
+![GitHub Streak](https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/streak.svg)
 
 </div>
 
 <div align="center">
   <br>
   
-![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MikeeBuilds&theme=github_dark&title_color=00FF99&text_color=FFFFFF&bg_color=0D1117&border_color=0D1117&icon_color=00FF99)
-![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MikeeBuilds&theme=github_dark&title_color=00FF99&text_color=FFFFFF&bg_color=0D1117&border_color=0D1117&icon_color=00FF99&chart_color=00FF99)
+![GitHub Stats](https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/stats.svg)
+![Top Languages](https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/languages.svg)
 
 </div>
 
