@@ -1,172 +1,94 @@
-<!-- Header -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&height=100&lines=Building+BlackCircleTerminal;Quantitative+Trading+Infrastructure;Autonomous+AI+Agents;High+Performance+Systems" alt="Typing SVG">
+  <a href="https://pokehunt.fun">
+    <img src="./assets/pokehunt-github-banner.svg" alt="Michael Ludlow — Founder of PokeHunt" width="100%">
+  </a>
 </p>
 
-# 👨🏾‍💻 Michael Ludlow
-### Full Stack Engineer & Quant Developer
+<p align="center">
+  <a href="https://pokehunt.fun/app"><img src="https://img.shields.io/badge/LAUNCH_THE_APP-7C3AED?style=for-the-badge&logo=safari&logoColor=white" alt="Launch the PokeHunt app"></a>
+  <a href="https://discord.gg/3tD7pp2DAT"><img src="https://img.shields.io/badge/DISCORD-JOIN_THE_HUNT-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join the PokeHunt Discord"></a>
+  <a href="https://pokehunt.fun/stock-checker"><img src="https://img.shields.io/badge/LIVE_STOCK_MAP-C9F227?style=for-the-badge&logo=googlemaps&logoColor=111111" alt="Open the live stock map"></a>
+  <a href="https://pokehunt.fun/blog"><img src="https://img.shields.io/badge/TCG_INTEL-FF7A45?style=for-the-badge&logo=rss&logoColor=white" alt="Read PokeHunt TCG intelligence"></a>
+</p>
 
-<div align="center">
+<p align="center">
+  <a href="https://pokehunt.fun"><img src="https://img.shields.io/website?url=https%3A%2F%2Fpokehunt.fun&style=flat-square&label=pokehunt.fun&up_message=LIVE&up_color=C9F227&down_color=FF5A5F" alt="PokeHunt website status"></a>
+  <img src="https://img.shields.io/github/followers/MikeeBuilds?style=flat-square&logo=github&label=Hunters%20following&color=7C3AED" alt="GitHub followers">
+  <img src="https://komarev.com/ghpvc/?username=MikeeBuilds&style=flat-square&label=Profile+scans&color=7C3AED" alt="Profile views">
+</p>
 
-![GitHub Followers](https://img.shields.io/github/followers/MikeeBuilds?style=for-the-badge&logo=github&color=00FF99)
-![GitHub Stars](https://img.shields.io/github/stars/MikeeBuilds?style=for-the-badge&logo=github&color=00FF99)
-![Profile Views](https://komarev.com/ghpvc/?username=MikeeBuilds&color=00FF99&style=for-the-badge&label=Profile+Views)
+# Hey, I'm Mike 👋🏾
 
-</div>
+I'm the founder and lead builder of **[PokeHunt](https://pokehunt.fun)**—a community-powered platform helping Pokémon TCG collectors find cards at retail before the shelves are empty.
 
-I build autonomous trading systems and high-performance financial infrastructure. Currently architecting **[BlackCircleTerminal.com](https://blackcircleterminal.com)**, a next-generation platform for retail quantitative trading and options analytics.
+> We're building the **Waze for Pokémon cards**: real-time restock intelligence, verified community reports, local alerts, and rewards for collectors who help other collectors.
 
----
+My day-to-day is a mix of **SwiftUI**, product engineering, retailer data, maps, community systems, and figuring out how to make hunting shiny cardboard suck less.
 
-## 🏆 Open Source Contributions
+## 📍 PokeHunt Field Guide
 
-<div align="center">
+- **[Launch the PokeHunt App](https://pokehunt.fun/app)** — live map, sightings, alerts, collection tools, and community features
+- **[Check Pokémon Stock](https://pokehunt.fun/stock-checker)** — retailer and product intelligence without the scalper markup
+- **[Join the Discord](https://discord.gg/3tD7pp2DAT)** — share finds, get drop intel, earn XP, and hunt with the community
+- **[Read the TCG Intel](https://pokehunt.fun/blog)** — restock guides, product research, market watchlists, and release coverage
+- **[Follow PokeHunt on X](https://x.com/pokehuntdotfun)** — shipping updates, restocks, giveaways, and collector chaos
 
-[![Aparent](https://img.shields.io/badge/Aparent-Contributor-D6D876?style=for-the-badge&logo=github&logoColor=black)](https://github.com/AndyMik90/Auto-Claude)
-[![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=for-the-badge)](https://opensource.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](https://github.com/AndyMik90/Auto-Claude/pulls)
+## 🛠️ What I'm Building Right Now
 
-</div>
+```text
+PokeHunt iOS     SwiftUI • MapKit • real-time alerts • field reporting
+PokeHunt Web     React • TypeScript • maps • stock intelligence • community
+Platform         Supabase • PostgreSQL • Cloudflare • automation • AI tooling
+Community        Discord systems • XP • rewards • verified local intel
+```
 
-> 🤖 **[Aparent](https://github.com/AndyMik90/Auto-Claude)** - Contributing to the autonomous multi-agent coding framework. Helping with issue triage and feature development.
+The product is built around one idea: **collectors working together can beat information hoarding.** One verified sighting helps every nearby hunter make a better decision.
 
----
+## 🧬 Collector's Corner 👻
 
-## 🚀 Active Development
+When I'm not shipping PokeHunt, I'm usually hunting **Mewtwo** and **Gengar** cards. Psychic menace on one side, purple chaos gremlin on the other. Perfect balance.
 
-### 📉 [BlackCircleTerminal](https://blackcircleterminal.com)
-**The Operating System for Retail Quants.**  
-Building an institutional-grade terminal for retail traders, featuring:
-- **Autonomous Agents:** AI-driven market analysis and trade execution. 
-- **Options Analytics:** Real-time volatility surfaces and greek hedging strategies.
-- **Community:** Integrated Discord signal processing and sentiment analysis.
+<p align="center">
+  <a href="https://pokehunt.fun">
+    <img src="https://pokehunt.fun/blog/assets/cards/team-rockets-mewtwo-ex-sir.png" alt="Team Rocket's Mewtwo ex card" height="360">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://pokehunt.fun">
+    <img src="https://pokehunt.fun/blog/assets/cards/mega-gengar-ex-sir.png" alt="Mega Gengar ex card" height="360">
+  </a>
+</p>
 
----
+<p align="center"><sub>Two of my favorite Pokémon to collect. If you've got a wild Mewtwo or Gengar pickup, come show it off in the <a href="https://discord.gg/3tD7pp2DAT">PokeHunt Discord</a>.</sub></p>
 
-## 🛠️ Technical Arsenal
+## ⚡ Builder Loadout
 
-### Languages
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-
-</div>
-
-### Frameworks & Libraries
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-0071E3?style=for-the-badge&logo=swift&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-
-</div>
-
-### AI & Machine Learning
-<div align="center">
-
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Anthropic](https://img.shields.io/badge/Anthropic_Claude-D4A574?style=for-the-badge&logo=anthropic&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-
-</div>
-
-### Databases & Infrastructure
-<div align="center">
-
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-
-</div>
-
-### Cloud & DevOps
-<div align="center">
-
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-
-</div>
-
----
-
-## 🎯 Currently Building
-
-<div align="center">
-
-![Trading](https://img.shields.io/badge/Quantitative_Trading-00FF99?style=for-the-badge&logo=tradingview&logoColor=black)
-![AI Agents](https://img.shields.io/badge/Autonomous_AI_Agents-412991?style=for-the-badge&logo=openai&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS_Development-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Web3](https://img.shields.io/badge/Web3-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white)
-
-</div>
-
----
+<p>
+  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift">
+  <img src="https://img.shields.io/badge/SwiftUI-0D96F6?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=3FCF8E" alt="Supabase">
+  <img src="https://img.shields.io/badge/Mapbox-111111?style=for-the-badge&logo=mapbox&logoColor=white" alt="Mapbox">
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare">
+  <img src="https://img.shields.io/badge/OpenAI-111111?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
+</p>
 
 ## 📊 Engineering Activity
 
-<div align="center">
-  
-![GitHub Streak](https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/streak.svg)
+<p align="center">
+  <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/streak.svg" alt="Mike's dynamic GitHub contribution streak" width="100%">
+</p>
 
-</div>
+<p align="center">
+  <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/stats.svg" alt="Mike's private-aware dynamic GitHub statistics" width="49%">
+  <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/languages.svg" alt="Mike's private-aware top programming languages" width="49%">
+</p>
 
-<div align="center">
-  <br>
-  
-![GitHub Stats](https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/stats.svg)
-![Top Languages](https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/languages.svg)
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MikeeBuilds&bg_color=0B0714&color=DDD6FE&line=C9F227&point=A78BFA&hide_border=true&area=true&area_color=7C3AED" alt="Mike's GitHub contribution graph" width="100%">
+</p>
 
-</div>
-
-<div align="center">
-  <br>
-  
-![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=MikeeBuilds&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&hide_border=true&area=true)
-
-</div>
-
----
-
-## 💻 Dev Setup
-
-<div align="center">
-
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![iTerm2](https://img.shields.io/badge/iTerm2-000000?style=for-the-badge&logo=iterm2&logoColor=white)
-![Coffee](https://img.shields.io/badge/Powered_by-Coffee_☕-brown?style=for-the-badge)
-
-</div>
-
----
-
-## 🌐 Connect
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-ludlow-51b3b2257/)
-[![Twitter](https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/MikeeBuilds)
-[![Discord](https://img.shields.io/badge/Discord-Join_BCT-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-link)
-[![Website](https://img.shields.io/badge/BlackCircleTerminal.com-Visit-00FF99?style=for-the-badge&logo=google-chrome&logoColor=black&labelColor=00FF99)](https://blackcircleterminal.com)
-
-</div>
-
----
-
-<div align="center">
-  
-  **"Building the future of autonomous trading, one agent at a time."**
-  
-</div>
+<p align="center">
+  <strong>Build the hunt. Share the find.</strong><br>
+  <a href="https://pokehunt.fun">pokehunt.fun</a> • <a href="https://discord.gg/3tD7pp2DAT">Discord</a> • <a href="https://x.com/pokehuntdotfun">@pokehuntdotfun</a> • <a href="https://twitter.com/MikeeBuilds">@MikeeBuilds</a>
+</p>

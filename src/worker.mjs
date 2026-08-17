@@ -2,15 +2,15 @@ const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
 const USERNAME = "MikeeBuilds";
 const CACHE_SECONDS = 900;
 const MAX_REPOSITORY_PAGES = 5;
-const VERSION = "2026-08-17.2";
+const VERSION = "2026-08-17.3";
 
 const THEME = {
-  background: "#0D1117",
-  border: "#30363D",
-  title: "#00FF99",
-  text: "#F0F6FC",
-  muted: "#8B949E",
-  track: "#21262D",
+  background: "#0B0714",
+  border: "#3B2D50",
+  title: "#C9F227",
+  text: "#F7F3FF",
+  muted: "#A99DBB",
+  track: "#241A33",
 };
 
 const FALLBACK_COLORS = [

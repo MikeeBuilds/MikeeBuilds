@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Michael Ludlow — Founder of PokeHunt</title>
+  <desc id="desc">A PokeHunt field radar with psychic purple and electric lime accents for a Swift engineer and Mewtwo and Gengar collector.</desc>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0714"/>
+      <stop offset="0.55" stop-color="#151023"/>
+      <stop offset="1" stop-color="#080d0d"/>
+    </linearGradient>
+    <radialGradient id="psychic" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#c4b5fd" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#c9f227"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#a78bfa" stroke-opacity="0.07"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="28" fill="url(#surface)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
+  <path d="M0 304C210 238 332 340 512 276S852 195 1200 268V360H0Z" fill="#c9f227" opacity="0.035"/>
+  <circle cx="1018" cy="180" r="206" fill="url(#psychic)"/>
+
+  <g transform="translate(68 58)">
+    <rect width="176" height="28" rx="14" fill="#c9f227"/>
+    <text x="88" y="19" text-anchor="middle" fill="#0b0714" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="800" letter-spacing="1.4">BUILDING IN PUBLIC</text>
+
+    <text x="0" y="103" fill="#f7f3ff" font-family="Trebuchet MS, Arial, sans-serif" font-size="70" font-weight="900" letter-spacing="-3">POKEHUNT</text>
+    <circle cx="361" cy="88" r="7" fill="#c9f227" filter="url(#glow)"/>
+    <text x="0" y="137" fill="#b8aacd" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="600" letter-spacing="2">THE WAZE FOR POKEMON CARDS</text>
+
+    <text x="0" y="190" fill="#f7f3ff" font-family="Trebuchet MS, Arial, sans-serif" font-size="20" font-weight="700">MICHAEL LUDLOW</text>
+    <text x="0" y="217" fill="#8f83a4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="1.5">FOUNDER  /  ENGINEER  /  COLLECTOR</text>
+
+    <g transform="translate(0 244)">
+      <rect width="179" height="34" rx="17" fill="#8b5cf6" fill-opacity="0.16" stroke="#a78bfa" stroke-opacity="0.65"/>
+      <circle cx="18" cy="17" r="6" fill="#a78bfa"/>
+      <text x="33" y="22" fill="#ddd6fe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700">MEWTWO COLLECTOR</text>
+    </g>
+    <g transform="translate(193 244)">
+      <rect width="177" height="34" rx="17" fill="#c9f227" fill-opacity="0.09" stroke="#c9f227" stroke-opacity="0.6"/>
+      <path d="M17 11c5 0 8 3 8 7 0 4-3 7-8 7-4 0-7-2-7-5 0-2 2-4 4-4 2 0 3 1 3 3" fill="none" stroke="#c9f227" stroke-width="2" stroke-linecap="round"/>
+      <text x="33" y="22" fill="#e5f7a6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700">GENGAR COLLECTOR</text>
+    </g>
+  </g>
+
+  <g transform="translate(820 32)">
+    <circle cx="180" cy="148" r="119" fill="none" stroke="#a78bfa" stroke-opacity="0.14"/>
+    <circle cx="180" cy="148" r="86" fill="none" stroke="#a78bfa" stroke-opacity="0.22"/>
+    <circle cx="180" cy="148" r="52" fill="none" stroke="#c9f227" stroke-opacity="0.28"/>
+    <path d="M180 29V267M61 148H299" stroke="#a78bfa" stroke-opacity="0.13"/>
+    <path d="M86 226c45-24 50-89 96-81s44-50 90-58" fill="none" stroke="url(#route)" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 11"/>
+    <circle cx="86" cy="226" r="7" fill="#a78bfa"/>
+    <circle cx="272" cy="87" r="7" fill="#c9f227" filter="url(#glow)"/>
+
+    <g transform="translate(139 102)">
+      <path d="M41 0C18 0 0 18 0 41c0 32 41 78 41 78s41-46 41-78C82 18 64 0 41 0Z" fill="#7c3aed" stroke="#c4b5fd" stroke-width="3"/>
+      <circle cx="41" cy="41" r="17" fill="#0b0714" stroke="#c9f227" stroke-width="5"/>
+      <path d="M25 41h32" stroke="#f7f3ff" stroke-width="4"/>
+      <circle cx="41" cy="41" r="6" fill="#f7f3ff"/>
+    </g>
+
+    <rect x="82" y="286" width="196" height="28" rx="14" fill="#0b0714" stroke="#c9f227" stroke-opacity="0.45"/>
+    <text x="180" y="305" text-anchor="middle" fill="#c9f227" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="1.5">BUILD • HUNT • SHARE</text>
+  </g>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="358.5" rx="27.25" fill="none" stroke="#a78bfa" stroke-opacity="0.3" stroke-width="1.5"/>
+</svg>
