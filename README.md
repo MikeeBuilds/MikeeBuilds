@@ -117,15 +117,15 @@ Building an institutional-grade terminal for retail traders, featuring:
 
 <div align="center">
   
-![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=00FF99)
+![GitHub Streak](https://streak-stats.demolab.com/?user=MikeeBuilds&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=00FF99)
 
 </div>
 
 <div align="center">
   <br>
   
-![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MikeeBuilds&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&icon_color=00FF99&text_color=FFFFFF&count_private=true&include_all_commits=true)
-![Top Languages](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=MikeeBuilds&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FF99&text_color=FFFFFF)
+![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MikeeBuilds&theme=github_dark&title_color=00FF99&text_color=FFFFFF&bg_color=0D1117&border_color=0D1117&icon_color=00FF99)
+![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MikeeBuilds&theme=github_dark&title_color=00FF99&text_color=FFFFFF&bg_color=0D1117&border_color=0D1117&icon_color=00FF99&chart_color=00FF99)
 
 </div>
 
