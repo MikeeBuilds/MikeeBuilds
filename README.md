@@ -82,11 +82,11 @@ When I'm not shipping PokeHunt, I'm usually hunting **Mewtwo** and **Gengar** ca
 
 <p align="center">
   <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/stats.svg" alt="Mike's private-aware dynamic GitHub statistics" width="49%">
-  <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/languages.svg" alt="Mike's private-aware top programming languages" width="49%">
+  <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/languages.svg?v=20261013" alt="Mike's private-aware top programming languages" width="49%">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MikeeBuilds&bg_color=0B0714&color=DDD6FE&line=C9F227&point=A78BFA&hide_border=true&area=true&area_color=7C3AED" alt="Mike's GitHub contribution graph" width="100%">
+  <img src="https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/activity.svg?v=20261013" alt="Mike's public and private GitHub contribution graph" width="100%">
 </p>
 
 <p align="center">
