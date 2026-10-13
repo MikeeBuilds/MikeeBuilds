@@ -359,6 +359,28 @@ export function renderStreak(snapshot) {
   });
 }
 
+export function renderActivity(snapshot) {
+  const days = snapshot.contributions.days
+    .filter((day) => day.date <= snapshot.generatedAt.slice(0, 10)).slice(-30);
+  const maximum = Math.max(1, ...days.map((day) => day.count));
+  const step = 896 / Math.max(days.length, 1);
+  const bars = days.map((day, index) => {
+    const height = Math.max(2, (day.count / maximum) * 138);
+    const x = 32 + index * step;
+    const label = index === 0 || index === days.length - 1 || index % 7 === 0
+      ? `<text x="${x + (step - 5) / 2}" y="215" text-anchor="middle" class="label">${xml(day.date.slice(5))}</text>` : "";
+    return `<rect x="${x.toFixed(2)}" y="${(195 - height).toFixed(2)}" width="${Math.max(1, step - 5).toFixed(2)}" height="${height.toFixed(2)}" rx="3" fill="${day.count ? THEME.title : THEME.track}"><title>${xml(day.date)}: ${xml(day.count)} contributions</title></rect>${label}`;
+  }).join("");
+
+  return card({
+    width: 960,
+    height: 255,
+    title: `${snapshot.username} • recent contribution activity`,
+    body: bars || `<text x="32" y="120" class="label">No contribution data available yet.</text>`,
+    footer: `Public profile calendar • ${days.length} reported days • updated ${snapshot.generatedAt.slice(0, 16).replace("T", " ") + " UTC"}`,
+  });
+}
+
 export function renderError(message) {
   return card({
     width: 480,
