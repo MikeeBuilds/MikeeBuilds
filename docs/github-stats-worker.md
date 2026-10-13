@@ -37,9 +37,14 @@ its previous behavior; the activity renderer is also imported by the local job.
   only to `api.github.com`, never to the Worker. Redirects are rejected.
 - Only the four safe SVGs are staged/committed. No token, repository identifiers,
   raw calendar payload, or upstream error body is written to the repo or logs.
-- SVGs are parsed as XML with Python's standard-library ElementTree and checked
-  against a static element allowlist. Scripts, event attributes, external
-  references, DTDs, and error/placeholder cards are rejected.
+- SVGs are parsed as XML with Python's standard-library ElementTree in isolated
+  mode. Processing instructions and DTDs fail during parsing. Decoded attribute
+  names/values use a per-element allowlist: only numeric geometry, literal hex
+  colors, known labels/classes, and the existing local language clip are allowed.
+  CSS permits only the renderer's fixed font family, numeric font size/weight,
+  hex fills, and known selectors. Imports, escapes, external references,
+  `xml:base`, inline styles, and unknown attributes are rejected. Error and
+  placeholder cards are also rejected.
 - The three Worker cards display **fetched** timestamps, not claimed generation
   timestamps. Their underlying data can also be up to the Worker's cache age
   (normally 15 minutes) old. The graph displays its generation timestamp.

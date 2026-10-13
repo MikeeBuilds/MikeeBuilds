@@ -66,6 +66,7 @@ test("upstream failures leave every last-good asset untouched", async () => {
       new Response("upstream secret", { status: 503 }),
       new Response("<html>upstream secret</html>", { headers: { "content-type": "text/html" } }),
       new Response('<svg xmlns="http://www.w3.org/2000/svg">Activity cards are refreshing</svg>', { headers: { "content-type": "image/svg+xml" } }),
+      new Response(renderLanguages(SNAPSHOT).replace('fill="#0B0714"', 'fill="&#117;rl(&#104;ttps://example.com/track)"'), { headers: { "content-type": "image/svg+xml" } }),
     ]) {
       await assert.rejects(refreshCards({ outputDirectory, token: "secret", now: NOW,
         fetchImpl: fakeFetch((url) => url.endsWith("/languages.svg") ? failure : null),
@@ -110,6 +111,51 @@ test("SVG validation rejects wrong-card, malformed XML and active/external conte
     svg.replace("<svg ", '<!DOCTYPE svg [<!ENTITY x "secret">]><svg '),
   ]) assert.throws(() => validateSVG(bad, "languages"), /Invalid languages/);
   assert.throws(() => validateSVG(svg, "stats"), /Invalid stats/);
+});
+
+test("SVG parser rejects processing instructions before, within, and after the root", () => {
+  const svg = renderLanguages(SNAPSHOT);
+  const instruction = '<?xml-stylesheet type="text/css" href="https://example.com/track.css"?>';
+  for (const bad of [
+    svg.replace("?>", "?>" + instruction),
+    svg.replace("<style>", instruction + "<style>"),
+    svg + instruction,
+  ]) assert.throws(() => validateSVG(bad, "languages"), /Invalid languages/);
+});
+
+test("SVG validation checks XML-decoded URL attribute values", () => {
+  const svg = renderLanguages(SNAPSHOT);
+  for (const bad of [
+    svg.replace('fill="#0B0714"', 'fill="&#117;rl(&#104;ttps://example.com/track)"'),
+    svg.replace('stroke="#3B2D50"', 'stroke="&#x75;rl(&#x68;ttps://example.com/track)"'),
+    svg.replace('clip-path="url(#language-bar)"', 'clip-path="&#117;rl(&#104;ttps://example.com/track)"'),
+  ]) assert.throws(() => validateSVG(bad, "languages"), /Invalid languages/);
+  // Decoding is not itself unsafe: known local clips and literal colors work.
+  validateSVG(svg.replace('fill="#0B0714"', 'fill="&#35;0B0714"')
+    .replace('clip-path="url(#language-bar)"', 'clip-path="&#117;rl(&#35;language-bar)"'), "languages");
+});
+
+test("SVG styles reject escaped imports and CSS URL escapes after XML parsing", () => {
+  const svg = renderLanguages(SNAPSHOT);
+  for (const directive of [
+    '@im\\70 ort "https://example.com/track.css";',
+    '\\40 import "https://example.com/track.css";',
+    '&#64;import "https://example.com/track.css";',
+    '.title { fill: u\\72l(https://example.com/track); }',
+    '.title { fill: &#117;rl(https://example.com/track); }',
+  ]) assert.throws(() => validateSVG(svg.replace("<style>", "<style>" + directive), "languages"), /Invalid languages/);
+});
+
+test("SVG attributes reject xml:base and any unsupported rendering/reference attribute", () => {
+  const svg = renderLanguages(SNAPSHOT);
+  for (const bad of [
+    svg.replace("<svg ", '<svg xml:base="https://example.com/" '),
+    svg.replace('<g clip-path=', '<g xml:base="https://example.com/" clip-path='),
+    svg.replace("<svg ", '<svg style="fill: red" '),
+    svg.replace("<rect ", '<rect filter="&#117;rl(&#104;ttps://example.com/track)" '),
+    svg.replace("<rect ", '<rect cursor="https://example.com/track" '),
+    svg.replace('id="language-bar"', 'id="unexpected-clip"'),
+  ]) assert.throws(() => validateSVG(bad, "languages"), /Invalid languages/);
 });
 
 test("successful refresh writes exactly four parseable SVG assets", async () => {

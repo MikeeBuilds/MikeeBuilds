@@ -14,21 +14,101 @@ const QUERY = `query ProfileCalendar($from: DateTime!, $to: DateTime!) {
   }
 }`;
 
-// Parse, then allow only the static SVG elements/attributes our renderer uses.
-// ElementTree does not fetch external entities; DTDs and external references are
-// additionally rejected. Nothing from upstream is interpolated into a shell.
-const VALIDATE_XML = `
-import sys, xml.etree.ElementTree as ET
+// Validate decoded XML and a deliberately small CSS grammar, not raw denylist
+// matches: entity encoding, CSS escapes and base URLs must not hide references.
+// Nothing from upstream is interpolated into a shell.
+const VALIDATE_XML = String.raw`
+import re, sys, xml.etree.ElementTree as ET
+
+class StaticSVGBuilder(ET.TreeBuilder):
+    def pi(self, target, data):
+        raise ValueError('Processing instructions are not allowed')
+    def doctype(self, name, pubid, system):
+        raise ValueError('Document types are not allowed')
+
+classes = {
+    'title', 'value', 'label', 'percentage', 'streak-suffix', 'language',
+    'footer', 'streak-value', 'streak-label', 'error',
+}
+attributes = {
+    'svg': {'width', 'height', 'viewBox', 'role', 'aria-labelledby'},
+    'title': {'id'},
+    'desc': {'id'},
+    'style': set(),
+    'rect': {'x', 'y', 'width', 'height', 'rx', 'fill', 'stroke'},
+    'text': {'x', 'y', 'class', 'text-anchor'},
+    'clipPath': {'id'},
+    'g': {'clip-path'},
+    'circle': {'cx', 'cy', 'r', 'fill'},
+}
+number = r'-?\d+(?:\.\d+)?'
+color = r'#[0-9a-fA-F]{6}'
+
+def validate_css(css):
+    cursor = 0
+    for rule in re.finditer(r'([^{}]+)\{([^{}]*)\}', css):
+        assert not css[cursor:rule.start()].strip()
+        cursor = rule.end()
+        selectors, declarations = rule.groups()
+        for selector in selectors.split(','):
+            assert selector.strip() in {'text'} | {'.' + name for name in classes}
+        for declaration in declarations.split(';'):
+            if not declaration.strip():
+                continue
+            property_name, value = map(str.strip, declaration.split(':', 1))
+            if property_name == 'fill':
+                assert re.fullmatch(color, value)
+            elif property_name == 'font-size':
+                assert re.fullmatch(r'\d+px', value)
+            elif property_name == 'font-weight':
+                assert re.fullmatch(r'[1-9]00', value)
+            elif property_name == 'font-family':
+                assert value == '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+            else:
+                raise ValueError('Unsupported style property')
+    assert cursor and not css[cursor:].strip()
+
 try:
-    root = ET.fromstring(sys.stdin.read())
-    allowed = {'svg', 'title', 'desc', 'style', 'rect', 'text', 'clipPath', 'g', 'circle'}
+    parser = ET.XMLParser(target=StaticSVGBuilder())
+    root = ET.fromstring(sys.stdin.read(), parser=parser)
     assert root.tag == '{http://www.w3.org/2000/svg}svg'
+    ids = set()
+    clip_referenced = False
     for element in root.iter():
         assert element.tag.startswith('{http://www.w3.org/2000/svg}')
-        assert element.tag.split('}', 1)[1] in allowed
-        for attribute in element.attrib:
-            assert not attribute.lower().startswith('on')
-            assert attribute not in ('href', '{http://www.w3.org/1999/xlink}href')
+        tag = element.tag.split('}', 1)[1]
+        assert tag in attributes
+        assert set(element.attrib) <= attributes[tag]
+        for attribute, value in element.attrib.items():
+            if attribute in {'x', 'y', 'width', 'height', 'rx', 'cx', 'cy', 'r'}:
+                assert re.fullmatch(number, value)
+            elif attribute in {'fill', 'stroke'}:
+                assert re.fullmatch(color, value)
+            elif attribute == 'viewBox':
+                assert len(value.split()) == 4
+                assert all(re.fullmatch(number, part) for part in value.split())
+            elif attribute == 'id':
+                assert (tag, value) in {('title', 'title'), ('desc', 'desc'), ('clipPath', 'language-bar')}
+                assert value not in ids
+                ids.add(value)
+            elif attribute == 'class':
+                assert value in classes
+            elif attribute == 'text-anchor':
+                assert value in {'start', 'middle', 'end'}
+            elif attribute == 'clip-path':
+                assert value == 'url(#language-bar)'
+                clip_referenced = True
+            elif attribute == 'role':
+                assert value == 'img'
+            elif attribute == 'aria-labelledby':
+                assert value == 'title desc'
+            else:
+                raise ValueError('Unsupported attribute')
+        if tag == 'style':
+            assert not len(element)
+            validate_css(element.text or '')
+    assert {'title', 'desc'} <= ids
+    assert not clip_referenced or 'language-bar' in ids
 except Exception:
     sys.exit(1)
 `;
@@ -45,7 +125,7 @@ export function validateSVG(svg, name) {
       || /<!DOCTYPE|<!ENTITY|@import|url\(\s*[^#]|temporarily unavailable|credential is not configured|cards are refreshing/i.test(svg)) {
     throw new Error(`Invalid ${name} card`);
   }
-  const result = spawnSync("python3", ["-c", VALIDATE_XML], {
+  const result = spawnSync("python3", ["-I", "-c", VALIDATE_XML], {
     input: svg, encoding: "utf8", timeout: 5_000, maxBuffer: 1024,
   });
   if (result.status !== 0) throw new Error(`Invalid ${name} SVG XML`);
