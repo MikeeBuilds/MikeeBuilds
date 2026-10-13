@@ -1,112 +1,116 @@
-# Dynamic GitHub profile cards
+# GitHub-hosted profile card snapshots
 
-The `mikeebuilds-github-stats` Cloudflare Worker serves SVG cards for MikeeBuilds:
+The profile serves four checked-in SVGs from `assets/profile/`. A cold profile
+view never calls Cloudflare, GitHub GraphQL, or a third-party graph deployment.
+GitHub serves the last successful snapshot even if the refresh job fails.
 
-- `/stats.svg` — current-year total/private/public contributions and repository totals.
-- `/languages.svg` — language bytes aggregated across public and private owned repositories.
-- `/streak.svg` — current-year contribution streaks from the authenticated calendar.
-- `/activity.svg` — the latest 30 reported contribution days, including private activity.
-- `/health` — static deployment health and version metadata, not a freshness check.
-
-## Serving and refresh model
-
-The old implementation performed paginated GitHub GraphQL requests on a cold
-image request. GitHub's Camo image proxy could time out before that finished.
-The third-party Vercel activity graph was also disabled. All four cards now use
-the owned Worker and the same pre-rendered last-good bundle:
+## Architecture
 
 ```mermaid
 flowchart LR
-  Cron[15-minute cron] --> GitHub[Authenticated GitHub GraphQL]
-  GitHub --> Render[Aggregate and render four SVGs]
-  Render --> KV[PROFILE_CARDS KV: last-good bundle]
-  Render --> Edge[Local edge cache]
-  Camo[GitHub Camo request] --> Read[Bounded cache/KV read]
-  Edge --> Read
-  KV --> Read
-  Read --> SVG[SVG immediately; no GitHub wait]
-  Read -. stale or empty: background refresh .-> GitHub
+  Schedule[Hourly or manual GitHub Actions] --> Worker[Existing owned Worker]
+  Worker --> Three[Private-aware stats, languages, streak SVGs]
+  Schedule --> Calendar[Public profile calendar / GitHub GraphQL]
+  Calendar --> Graph[Owned activity SVG renderer]
+  Three --> Validate[HTTP + MIME + safe SVG + complete-calendar validation]
+  Graph --> Validate
+  Validate --> Commit[One commit with all four SVG assets]
+  Commit --> GitHub[GitHub-hosted images]
+  Profile[Profile README] --> GitHub
 ```
 
-- `PROFILE_CARDS` KV holds only the four rendered SVGs, schema, and generation
-  timestamp under `profile-cards:v1`. It is deliberately not expired on errors.
-- Memory and the Cache API accelerate reads. The edge copy is retained for seven
-  days but becomes stale after 15 minutes; stale edge/memory data checks KV so it
-  does not hide a newer scheduled refresh.
-- Reads have a 1.5-second storage budget. A storage failure serves any available
-  last-good bundle. A completely unseeded deployment returns a valid, clearly
-  labeled “refreshing” SVG with a 60-second cache TTL rather than a broken image.
-- Empty/stale reads can request a background refresh. Requests within the same
-  isolate share one refresh and retry no more than once a minute. Separate PoPs
-  can still refresh concurrently; the scheduled trigger is the primary refresher.
-- GitHub collection has a 20-second total timeout across at most five repository
-  pages. Only a complete successful collection replaces the bundle. Failure
-  retains old data; every data card displays its generation timestamp.
-- Normal SVGs use a five-minute client TTL and a 15-minute shared-cache TTL.
-  Camo may retain images longer. Query parameters do not create new origin cache
-  keys or add arbitrary GitHub requests.
-- `HEAD` and `GET` use the same bundle; `HEAD` never returns a body.
+The Worker remains a **refresh-only upstream**. This fix does not modify or
+deploy it, create a Cloudflare account/KV namespace, or copy its private-repo
+credential anywhere. `wrangler.jsonc` stays unchanged. The Worker code retains
+its previous behavior; the activity renderer is also imported by the local job.
 
-## Credential boundary
+## Data visibility and privacy
 
-`GITHUB_TOKEN` stays a Worker secret. Use read-only GitHub access to the account's
-repository metadata and authenticated contribution calendar. Do not place it in
-README URLs, KV, logs, or source control. Repository names, source code, raw API
-responses, tokens, and upstream error messages are never stored in the public
-card bundle. The cards intentionally disclose aggregate public/private counts
-and language totals, matching the prior profile behavior.
+- Stats, languages, and streak preserve the existing Worker's public + private
+  aggregate output. It returns no repository names or raw GraphQL payloads.
+- The graph requests only the profile contribution calendar. The Actions
+  `GITHUB_TOKEN` is repository-scoped; it cannot enumerate Mike's other private
+  repositories. The graph reflects whatever contribution counts GitHub exposes
+  to that viewer, including anonymized private counts when profile settings
+  permit them. It does not promise private-repository access.
+- No new PAT or Actions secret is required. The job's built-in token is sent
+  only to `api.github.com`, never to the Worker. Redirects are rejected.
+- Only the four safe SVGs are staged/committed. No token, repository identifiers,
+  raw calendar payload, or upstream error body is written to the repo or logs.
+- SVGs are parsed as XML with Python's standard-library ElementTree and checked
+  against a static element allowlist. Scripts, event attributes, external
+  references, DTDs, and error/placeholder cards are rejected.
+- The three Worker cards display **fetched** timestamps, not claimed generation
+  timestamps. Their underlying data can also be up to the Worker's cache age
+  (normally 15 minutes) old. The graph displays its generation timestamp.
 
-## Deploy and seed
+## Refresh and availability
 
-Deploy the Worker **before** merging the README endpoint change.
+`.github/workflows/profile-cards.yml` runs at minute 17 each hour and supports
+manual `workflow_dispatch` on `main`. Refreshes are serialized. The job uses
+Node 22 and Python 3 already present on GitHub's Ubuntu runner; no npm install
+or Cloudflare tooling is needed.
 
-1. Install the locked deployment tooling with `npm ci` and run `npm test`.
-2. Provision/select a namespace in the configured account with
-   `npx wrangler kv namespace create PROFILE_CARDS`. Add its **real** nonsecret ID
-   to `wrangler.jsonc` as `kv_namespaces: [{ binding: "PROFILE_CARDS", id: "..." }]`.
-   The binding is intentionally absent until provisioning can be completed;
-   **this branch is not deployment-ready without it**. Do not invent a namespace ID.
-3. Preserve the existing `GITHUB_TOKEN` secret. Only if absent, provision it with
-   `npx wrangler secret put GITHUB_TOKEN`; never pass its value in command arguments.
-4. Run `npm run deploy`. This deploys the `*/15 * * * *` scheduled trigger and KV
-   binding. Cron changes can take time to propagate.
-5. Seed via a direct request to `/languages.svg`; an empty deployment may initially
-   return the fast placeholder while `waitUntil` renders and persists all cards.
-   Inspect the direct response again after the background refresh finishes. Do
-   not point the README at an unseeded service or treat `/health` as proof of data.
-6. Confirm each of `/stats.svg`, `/languages.svg`, `/streak.svg`, `/activity.svg`
-   returns HTTP 200, `image/svg+xml`, actual data (not the placeholder), and an
-   expected update timestamp. Check TTFB and total time are comfortably below
-   Camo's observed roughly four-second deadline, including a cache-busting URL.
-7. After merge, open the actual GitHub profile, inspect every rendered image's
-   `camo.githubusercontent.com` URL, and verify those URLs return HTTP 200 SVGs
-   and render at their intended dimensions. The README's languages query version
-   intentionally gives Camo a new URL after its prior 504. Do not claim the public
-   profile is fixed based only on a healthy origin.
+The job retrieves all three upstream cards with 60-second request deadlines and
+fetches the calendar with a 30-second deadline. It requires HTTP 200, SVG MIME,
+expected card identity, well-formed safe SVG, and all 30 distinct calendar days
+with nonnegative integer counts. All validation finishes before writing files.
+Any collection/validation failure exits nonzero and leaves the local last-good
+set untouched. A later filesystem or Git failure prevents publication.
 
-Example origin timing probe (no credential required):
+A single Git commit publishes all four assets atomically. The job rebases that
+commit onto current `main` before a normal (never forced) push. A conflict or
+push rejection fails the job and leaves the previous published set available.
+Existing blog automation is out of scope and remains unchanged. Actions-generated
+pushes use the built-in token, so they do not trigger another workflow loop.
 
-```bash
-curl --max-time 5 -o /dev/null -sS -w 'HTTP %{http_code}; TTFB %{time_starttransfer}s; total %{time_total}s\n' https://mikeebuilds-github-stats.pokehunt-webhooks.workers.dev/languages.svg?v=20261013
-```
+GitHub can delay scheduled runs. Scheduled workflows in inactive public repos
+can also be disabled by GitHub. Check the Actions run status if the visible
+timestamps stop advancing; the checked-in images will still render.
 
-## Verification and operation
+## Rollout / verification
 
-`npm test` covers aggregation/privacy, pagination, fresh/cold/stale responses,
-background refresh sharing, upstream failures, storage timeouts, edge failures,
-HEAD, malformed storage, cron freshness, and empty/zero activity graphs. These
-are deterministic unit tests, not a substitute for the live Camo check above.
+1. Run `npm test`, `node --check scripts/refresh-profile-cards.mjs`, and
+   `git diff --check`.
+2. Seed all four real assets before merging. The normal refresh command is
+   `npm run refresh:cards`; it reads `GITHUB_TOKEN` from the environment. Local
+   operators can also read an existing authorized GitHub CLI token into process
+   memory and pass it to the exported `refreshCards` function. Do not print or
+   persist it. Actions uses its built-in token automatically.
+3. Confirm branch README images resolve on GitHub and each committed asset is
+   HTTP 200 SVG. Complete the required exact-head review/merge gates.
+4. Merge the reviewed branch. No Worker deployment, namespace, signup, or new
+   credential is necessary. Relative README URLs automatically resolve to the
+   assets on the merged branch.
+5. Dispatch **Refresh profile cards** on `main`; verify a successful run and
+   its complete four-asset commit. Confirm all four images load on the public
+   profile. Scheduled/manual runs execute only on `main`.
 
-The 15-minute job performs 96 refreshes/day, each using up to five GraphQL pages
-and one KV write; cache misses/stale traffic can add work. Monitor scheduled-event
-failures and visible generation timestamps. An old timestamp is retained truth,
-not a claim the data is current. Investigate a token/API failure without clearing
-the bundle. No repository names or upstream error payloads should be logged.
+Repository Actions must be enabled and the workflow must be permitted to write
+contents. Branch protection/rulesets must allow the existing Actions bot's data
+updates; if they block a push, the job reports failure without bypassing the rule.
 
-## Rollback
+## Local tests
 
-Use Cloudflare's deployment rollback for Worker code; keep the KV namespace and
-secret intact. If the new graph needs to be disabled, remove only its README
-image while retaining the three aggregate cards; do not restore the dead Vercel
-endpoint. Reverting to the pre-fix Worker restores the original cold-fetch risk.
-The existing blog workflow and all non-widget profile content are out of scope.
+`npm test` exercises aggregate language/streak behavior, private-data filtering,
+Worker snapshot collection, no credential forwarding, HTTP/MIME/placeholder
+failures, last-good preservation, malformed/active SVG rejection, incomplete or
+invalid calendars, safe complete output, the graph renderer, and checked-in
+asset/README consistency. Tests use fixtures and temporary directories; they do
+not call live services or modify the actual assets.
+
+## Risks and rollback
+
+- If the existing Worker credential expires or its service fails, snapshots
+  remain visible but stop advancing. Fix that refresh upstream or migrate it
+  separately; serving no longer depends on its response time.
+- Public graph counts may differ from private-aware stats depending on GitHub's
+  visibility policy. The graph is deliberately labeled public-profile calendar.
+- Each successful hourly run normally creates one small commit because the
+  fetch timestamp changes. No raw API history is committed.
+- GitHub/raw-image caching can briefly show the preceding snapshot.
+
+Disable only **Refresh profile cards** to freeze the current last-good set.
+Rollback code through a normal reviewed revert while preserving the SVG assets.
+If one card needs to be hidden, remove its README image; do not restore the dead
+Vercel graph URL. No branch, PR, account, secret, or dataset deletion is needed.

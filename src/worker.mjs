@@ -1,11 +1,8 @@
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
 const USERNAME = "MikeeBuilds";
 const CACHE_SECONDS = 900;
-const RETAIN_SECONDS = 7 * 24 * 60 * 60;
-const BUNDLE_KEY = "profile-cards:v1";
-const CARD_PATHS = ["/stats.svg", "/languages.svg", "/streak.svg", "/activity.svg"];
 const MAX_REPOSITORY_PAGES = 5;
-const VERSION = "2026-10-13.1";
+const VERSION = "2026-08-17.3";
 
 const THEME = {
   background: "#0B0714",
@@ -76,64 +73,7 @@ const PROFILE_QUERY = `
   }
 `;
 
-// Never put GitHub requests on the image-serving path. Camo's fetch deadline is
-// shorter than a cold paginated GraphQL request. KV preserves the last successful
-// render across isolates/PoPs; the Cache API and memory are only accelerators.
-export function createWorker({
-  fetchImpl = fetch,
-  now = () => new Date(),
-  getCache = () => typeof caches === "undefined" ? null : caches.default,
-  readTimeoutMs = 1500,
-} = {}) {
-  let lastGood = null;
-  let refreshing = null;
-  let nextRefreshAttempt = 0;
-
-  const cacheKey = new Request("https://profile-cards.internal/bundle-v1");
-  const newest = (...bundles) => bundles.filter(isBundle)
-    .sort((a, b) => Date.parse(b.generatedAt) - Date.parse(a.generatedAt))[0] ?? null;
-
-  const refresh = (env, cache) => {
-    if (refreshing) return refreshing;
-    nextRefreshAttempt = now().getTime() + 60_000;
-    refreshing = (async () => {
-      if (!env.GITHUB_TOKEN || !env.PROFILE_CARDS) throw new Error("Missing binding");
-      const snapshot = await fetchGitHubSnapshot(env.GITHUB_TOKEN, now(), fetchImpl);
-      const bundle = {
-        schema: 1,
-        generatedAt: snapshot.generatedAt,
-        cards: {
-          "/stats.svg": renderStats(snapshot),
-          "/languages.svg": renderLanguages(snapshot),
-          "/streak.svg": renderStreak(snapshot),
-          "/activity.svg": renderActivity(snapshot),
-        },
-      };
-      const serialized = JSON.stringify(bundle);
-      // No raw GraphQL payload, token, or repository identifiers enter storage.
-      // Keep KV indefinitely: an upstream failure must not erase the last good cards.
-      await env.PROFILE_CARDS.put(BUNDLE_KEY, serialized);
-      lastGood = newest(lastGood, bundle);
-      if (cache) {
-        try {
-          await cache.put(cacheKey, new Response(serialized, {
-            headers: { "Content-Type": "application/json", "Cache-Control": `max-age=${RETAIN_SECONDS}` },
-          }));
-        } catch {
-          // Durable publication succeeded; a local accelerator failure is not
-          // a failed refresh and must not invalidate the last-good bundle.
-          console.error("GitHub profile card edge-cache write failed");
-        }
-      }
-    })().finally(() => { refreshing = null; });
-    return refreshing;
-  };
-
-  return {
-  async scheduled(_controller, env, context) {
-    // Rejection remains visible to Cloudflare's scheduled-event monitoring.
-    context.waitUntil(refresh(env, getCache()));
-  },
+export default {
   async fetch(request, env, context) {
     const url = new URL(request.url);
 
@@ -148,69 +88,40 @@ export function createWorker({
       return Response.json({ ok: true, version: VERSION });
     }
 
-    if (!CARD_PATHS.includes(url.pathname)) {
+    const renderer = {
+      "/stats.svg": renderStats,
+      "/languages.svg": renderLanguages,
+      "/streak.svg": renderStreak,
+    }[url.pathname];
+
+    if (!renderer) {
       return new Response("Not found", { status: 404 });
     }
 
-    const cache = getCache();
+    if (!env.GITHUB_TOKEN) {
+      return svgResponse(renderError("Service credential is not configured"), 503);
+    }
+
+    const cache = typeof caches === "undefined" ? null : caches.default;
+    const cacheKey = new Request(`${url.origin}${url.pathname}?v=${VERSION}`, request);
+
+    if (cache) {
+      const cached = await cache.match(cacheKey);
+      if (cached) return request.method === "HEAD" ? withoutBody(cached) : cached;
+    }
+
     try {
-      // Even a storage outage has a bounded latency. Prefer the newest available
-      // bundle; do not keep serving stale edge data after cron has refreshed KV.
-      const stored = await withinDeadline((async () => {
-        let edge = null;
-        try {
-          const response = lastGood ? null : await cache?.match(cacheKey);
-          edge = response ? await response.json() : null;
-        } catch {
-          // A broken/evicted local cache must not prevent a durable read.
-        }
-        const candidate = newest(lastGood, edge);
-        lastGood = newest(lastGood, candidate);
-        if (candidate && now().getTime() - Date.parse(candidate.generatedAt) < CACHE_SECONDS * 1000) {
-          return candidate;
-        }
-        const durable = await env.PROFILE_CARDS?.get(BUNDLE_KEY, "json");
-        return newest(candidate, durable);
-      })(), readTimeoutMs);
-      lastGood = newest(lastGood, stored);
-    } catch {
-      // No upstream error text is logged or rendered: it could contain private data.
-      console.error("GitHub profile card storage read failed");
-    }
+      const snapshot = await fetchGitHubSnapshot(env.GITHUB_TOKEN, new Date());
+      const response = svgResponse(renderer(snapshot));
 
-    if ((!lastGood || now().getTime() - Date.parse(lastGood.generatedAt) >= CACHE_SECONDS * 1000)
-      && now().getTime() >= nextRefreshAttempt && env.GITHUB_TOKEN && env.PROFILE_CARDS) {
-      context.waitUntil(refresh(env, cache).catch(() => {
-        console.error("GitHub profile card background refresh failed");
-      }));
+      if (cache) context.waitUntil(cache.put(cacheKey, response.clone()));
+      return request.method === "HEAD" ? withoutBody(response) : response;
+    } catch (error) {
+      console.error("GitHub profile stats refresh failed", safeError(error));
+      return svgResponse(renderError("GitHub stats are temporarily unavailable"), 502);
     }
-
-    const response = lastGood
-      ? svgResponse(lastGood.cards[url.pathname])
-      : svgResponse(renderError("Activity cards are refreshing. Please check back shortly."), 200, 60);
-    return request.method === "HEAD" ? withoutBody(response) : response;
   },
-  };
-}
-
-export default createWorker();
-
-function isBundle(bundle) {
-  return bundle?.schema === 1 && Number.isFinite(Date.parse(bundle.generatedAt))
-    && CARD_PATHS.every((path) => typeof bundle.cards?.[path] === "string"
-      && bundle.cards[path].includes("<svg"));
-}
-
-async function withinDeadline(promise, milliseconds) {
-  let timer;
-  try {
-    return await Promise.race([promise, new Promise((_, reject) => {
-      timer = setTimeout(() => reject(new Error("Storage deadline")), milliseconds);
-    })]);
-  } finally {
-    clearTimeout(timer);
-  }
-}
+};
 
 export async function fetchGitHubSnapshot(token, now, fetchImpl = fetch) {
   const from = new Date(Date.UTC(now.getUTCFullYear(), 0, 1)).toISOString();
@@ -220,12 +131,10 @@ export async function fetchGitHubSnapshot(token, now, fetchImpl = fetch) {
   let contributions = null;
   let repositoryTotal = 0;
   let page = 0;
-  const signal = AbortSignal.timeout(20_000);
 
   do {
     const response = await fetchImpl(GITHUB_GRAPHQL_URL, {
       method: "POST",
-      signal,
       headers: {
         Accept: "application/vnd.github+json",
         Authorization: `Bearer ${token}`,
@@ -245,7 +154,7 @@ export async function fetchGitHubSnapshot(token, now, fetchImpl = fetch) {
 
     const payload = await response.json();
     if (payload.errors?.length) {
-      throw new Error("GitHub GraphQL returned errors");
+      throw new Error(payload.errors.map((entry) => entry.message).join("; "));
     }
 
     const user = payload.data?.user;
@@ -379,7 +288,7 @@ export function renderStats(snapshot) {
     height: 230,
     title: `${snapshot.username} • ${snapshot.year} activity`,
     body: cells,
-    footer: `GitHub calendar + all repositories • updated ${formatTimestamp(snapshot.generatedAt)}`,
+    footer: `GitHub calendar + all repositories • updated ${formatTimestamp(snapshot.generatedAt)} • 15m cache`,
   });
 }
 
@@ -419,7 +328,7 @@ export function renderLanguages(snapshot) {
       <clipPath id="language-bar"><rect x="28" y="57" width="${barWidth}" height="12" rx="6"/></clipPath>
       <g clip-path="url(#language-bar)">${bar}</g>
       ${legend}`,
-    footer: `Language bytes • ${snapshot.repositoryTotal} repos • updated ${formatTimestamp(snapshot.generatedAt)}`,
+    footer: `By repository language bytes • ${snapshot.repositoryTotal} repositories • 15m cache`,
   });
 }
 
@@ -446,7 +355,7 @@ export function renderStreak(snapshot) {
     height: 190,
     title: `${snapshot.username} • contribution streak`,
     body,
-    footer: `Public + private activity • updated ${formatTimestamp(snapshot.generatedAt)} • 15m refresh`,
+    footer: `Public + private activity • updated ${formatTimestamp(snapshot.generatedAt)} • 15m cache`,
   });
 }
 
@@ -468,7 +377,7 @@ export function renderActivity(snapshot) {
     height: 255,
     title: `${snapshot.username} • recent contribution activity`,
     body: bars || `<text x="32" y="120" class="label">No contribution data available yet.</text>`,
-    footer: `Public + private activity • ${days.length} reported days • updated ${formatTimestamp(snapshot.generatedAt)}`,
+    footer: `Public profile calendar • ${days.length} reported days • updated ${snapshot.generatedAt.slice(0, 16).replace("T", " ") + " UTC"}`,
   });
 }
 
@@ -505,12 +414,12 @@ function card({ width, height, title, body, footer }) {
   </svg>`;
 }
 
-function svgResponse(svg, status = 200, cacheSeconds = CACHE_SECONDS) {
+function svgResponse(svg, status = 200) {
   return new Response(svg, {
     status,
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",
-      "Cache-Control": `public, max-age=${Math.min(300, cacheSeconds)}, s-maxage=${cacheSeconds}, stale-while-revalidate=${cacheSeconds < CACHE_SECONDS ? cacheSeconds : 3600}`,
+      "Cache-Control": `public, max-age=300, s-maxage=${CACHE_SECONDS}, stale-while-revalidate=3600`,
       "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'",
       "X-Content-Type-Options": "nosniff",
       "X-Robots-Tag": "noindex, nofollow",
@@ -536,7 +445,7 @@ function formatPercent(value) {
 
 function formatTimestamp(value) {
   const date = new Date(value);
-  return `${date.toISOString().slice(0, 16).replace("T", " ")} UTC`;
+  return `${date.toISOString().slice(5, 16).replace("T", " ")} UTC`;
 }
 
 function xml(value) {
@@ -546,4 +455,8 @@ function xml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&apos;");
+}
+
+function safeError(error) {
+  return error instanceof Error ? error.message : "Unknown error";
 }

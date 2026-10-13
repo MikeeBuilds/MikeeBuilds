@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
+    "refresh:cards": "node scripts/refresh-profile-cards.mjs",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {

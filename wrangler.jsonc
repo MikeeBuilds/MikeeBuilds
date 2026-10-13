@@ -5,9 +5,6 @@
   "main": "src/worker.mjs",
   "compatibility_date": "2026-08-17",
   "workers_dev": true,
-  "triggers": {
-    "crons": ["*/15 * * * *"]
-  },
   "observability": {
     "enabled": true
   }
