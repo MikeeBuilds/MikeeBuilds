@@ -18,7 +18,7 @@
 
       <rect x="28" y="57" width="424" height="12" rx="6" fill="#241A33"/>
       <clipPath id="language-bar"><rect x="28" y="57" width="424" height="12" rx="6"/></clipPath>
-      <g clip-path="url(#language-bar)"><rect x="28.00" y="57" width="149.38" height="12" fill="#3178c6"/><rect x="177.38" y="57" width="69.91" height="12" fill="#f1e05a"/><rect x="247.29" y="57" width="59.80" height="12" fill="#F05138"/><rect x="307.09" y="57" width="48.58" height="12" fill="#3572A5"/><rect x="355.67" y="57" width="38.40" height="12" fill="#e34c26"/><rect x="394.07" y="57" width="37.38" height="12" fill="#663399"/></g>
+      <g clip-path="url(#language-bar)"><rect x="28.00" y="57" width="149.35" height="12" fill="#3178c6"/><rect x="177.35" y="57" width="69.99" height="12" fill="#f1e05a"/><rect x="247.34" y="57" width="59.78" height="12" fill="#F05138"/><rect x="307.12" y="57" width="48.56" height="12" fill="#3572A5"/><rect x="355.68" y="57" width="38.39" height="12" fill="#e34c26"/><rect x="394.08" y="57" width="37.37" height="12" fill="#663399"/></g>
 
         <circle cx="33" cy="97" r="5" fill="#3178c6"/>
         <text x="45" y="101" class="language">TypeScript</text>
@@ -34,9 +34,9 @@
         <text x="465" y="139" text-anchor="end" class="percentage">11.5%</text>
         <circle cx="33" cy="173" r="5" fill="#e34c26"/>
         <text x="45" y="177" class="language">HTML</text>
-        <text x="230" y="177" text-anchor="end" class="percentage">9.06%</text>
+        <text x="230" y="177" text-anchor="end" class="percentage">9.05%</text>
         <circle cx="268" cy="173" r="5" fill="#663399"/>
         <text x="280" y="177" class="language">CSS</text>
-        <text x="465" y="177" text-anchor="end" class="percentage">8.82%</text>
-    <text x="24" y="213" class="footer">Public + private language bytes • fetched 2026-11-15 22:55 UTC</text>
+        <text x="465" y="177" text-anchor="end" class="percentage">8.81%</text>
+    <text x="24" y="213" class="footer">Public + private language bytes • fetched 2026-11-16 02:48 UTC</text>
   </svg>
